@@ -1,0 +1,34 @@
+{
+    "version": "1.0.0",
+    "name": "Damo Antd",
+    "main": "./lib/index.js",
+    "hash": false,
+    "output": {
+      "file": "none",
+      "version": "",
+      "path": "dist",
+      "app": "rckit",
+      "library": "rcKit",
+      "libraryTarget": "umd"
+    },
+    "jsx": true,
+    "noParse": ["antd"],
+    "externals": [
+      "antd/",
+      "react",
+      "react-dom",
+      "hoist-non-react-statics",
+      "seamless-immutable",
+      "@ali/naza-react-starter",
+      "react-router",
+      "history",
+      "rxjs",
+      "cuid",
+      "clipboard"
+    ],
+    "devtool": "",
+    "partition": {
+      "NODE_ENV": "production"
+    }
+  }
+  
