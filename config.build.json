@@ -19,7 +19,7 @@
       "react-dom",
       "hoist-non-react-statics",
       "seamless-immutable",
-      "@ali/naza-react-starter",
+      "damo-core",
       "react-router",
       "history",
       "rxjs",
