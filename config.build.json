@@ -1,6 +1,7 @@
 {
-    "version": "1.0.0",
+    "version": "0.0.1",
     "name": "Damo Antd",
+    "index": "./index.html",
     "main": "./lib/index.js",
     "hash": false,
     "output": {
@@ -26,6 +27,7 @@
       "cuid",
       "clipboard"
     ],
+    "noUglify": true,
     "devtool": "",
     "partition": {
       "NODE_ENV": "production"

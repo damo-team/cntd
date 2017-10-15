@@ -1,45 +1,44 @@
 {
-    "version": "0.0.2",
-    "name": "damo-antd",
-    "main": "dist/rckit.js",
-    "author": {
-      "name": "baqian <st403471258@gmail.com>"
-    },
-    "keywords": [
-      "antd",
-      "damo",
-      "component"
-    ],
-    "description": "基于Antd组件规范自主研发的组件库",
-    "dependencies": {
-        "damo-core": "latest",
-        "antd": "~2.5.2",
-        "async-validator": "~1.6.6",
-        "cuid": "~1.3.8",
-        "history": "^1.13.1",
-        "hoist-non-react-statics": "~1.2.0",
-        "react": "^15.0.0",
-        "react-dnd": "2.1.4",
-        "react-dnd-html5-backend": "2.1.2",
-        "react-dom": "^15.0.0",
-        "seamless-immutable": "~6.1.1",
-        "clipboard": "1.5.12"
-    },
-    "homepage": "https://github.com/damo-team/antd",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/damo-team/antd.git"
-    },
-    "readmeFilename": "README.md",
-    "maintainers": [
-      {
-        "name": "baqian",
-        "email": "st403471258@gmail.com"
-      }
-    ],
-    "bugs": {
-      "url": "https://github.com/damo-team/antd/issues"
-    },
-    "license": "MIT"
-  }
-  
+  "version": "0.0.2",
+  "name": "damo-antd",
+  "main": "dist/rckit.js",
+  "author": {
+    "name": "baqian <st403471258@gmail.com>"
+  },
+  "keywords": [
+    "antd",
+    "damo",
+    "component"
+  ],
+  "description": "基于Antd组件规范自主研发的组件库",
+  "dependencies": {
+    "antd": "~2.5.2",
+    "async-validator": "~1.6.6",
+    "clipboard": "1.5.12",
+    "cuid": "~1.3.8",
+    "damo-core": "0.0.2",
+    "history": "^1.13.1",
+    "hoist-non-react-statics": "~1.2.0",
+    "react": "^15.0.0",
+    "react-dnd": "2.1.4",
+    "react-dnd-html5-backend": "2.1.2",
+    "react-dom": "^15.0.0",
+    "seamless-immutable": "~6.1.1"
+  },
+  "homepage": "https://github.com/damo-team/antd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damo-team/antd.git"
+  },
+  "readmeFilename": "README.md",
+  "maintainers": [
+    {
+      "name": "baqian",
+      "email": "st403471258@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/damo-team/antd/issues"
+  },
+  "license": "MIT"
+}
