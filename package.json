@@ -1,6 +1,7 @@
 {
     "version": "0.0.1",
     "name": "damo-antd",
+    "main": "dist/rckit.js",
     "author": {
       "name": "baqian <st403471258@gmail.com>"
     },
