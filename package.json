@@ -1,5 +1,5 @@
 {
-    "version": "0.0.1",
+    "version": "0.0.2",
     "name": "damo-antd",
     "main": "dist/rckit.js",
     "author": {
@@ -12,7 +12,7 @@
     ],
     "description": "基于Antd组件规范自主研发的组件库",
     "dependencies": {
-        "@ali/naza-react-starter": "~1.6.24",
+        "damo-core": "latest",
         "antd": "~2.5.2",
         "async-validator": "~1.6.6",
         "cuid": "~1.3.8",
