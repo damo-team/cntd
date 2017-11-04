@@ -5,9 +5,10 @@ import Button from 'antd/lib/button';
 import Breadcrumb from 'antd/lib/breadcrumb';
 import Icon from 'antd/lib/icon';
 import Input from 'antd/lib/input';
-import NavLink from './navLink';
+import NavLink from '../navLink';
 
-export default class SceneComponent extends Component {
+import Selector from './selector';
+class SceneComponent extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     table: PropTypes.object,
@@ -187,4 +188,9 @@ export default class SceneComponent extends Component {
       </div>
     );
   }
+}
+
+export {
+  SceneComponent,
+  Selector
 }

@@ -5,9 +5,11 @@ import Input from 'antd/lib/input';
 import Tooltip from 'antd/lib/tooltip';
 import Icon from 'antd/lib/icon';
 import Alert from 'antd/lib/alert';
-import DragItem from '../dragItem';
+import DragItem from '../dnd/dragItem';
 
-export default class TagSearcher extends Component {
+import './index.less';
+
+export class TagSearcher extends Component {
   static propTypes = {
     entityCode: PropTypes.string.isRequired,
     tagCode: PropTypes.string.isRequired,

@@ -5,7 +5,7 @@ import Button from 'antd/lib/button';
 import Dropdown from 'antd/lib/dropdown';
 import Icon from 'antd/lib/icon';
 
-export default class NavLink extends Component {
+export class NavLink extends Component {
   static propsTypes = {
     links: PropTypes.array.isRequired,
     menus: PropTypes.array.isRequired,
@@ -19,66 +19,63 @@ export default class NavLink extends Component {
     menus: []
   }
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      actions: props
-        .links
-        .concat(props.menus.map(item => {
-          item.isMenu = true;
-          return item
-        }))
-    }
+  state = {
+    tick: + new Date().getTime()
   }
 
-  setActions(key, flag) {
-    const newActions = [].concat(this.state.actions);
-    const item = newActions.find(action => action.key === key);
-    if (item.disabled !== undefined) {
-      item.disabled = flag;
-    } else if (item.loading !== undefined) {
-      item.loading = flag;
+  setAction(key, flag) {
+    let item;
+    if (Object(key) === key) {
+      item = key;
+    } else {
+      item = this
+        .props
+        .links
+        .find(item => item.key === key) || this
+        .props
+        .menus
+        .find(item => item.key === key);
     }
-    this.setState({actions: newActions});
+
+    if (item.propName) {
+      item[item.propName] = flag;
+    }
+
+    this.setState({
+      tick: + new Date().getTime()
+    });
+
     return item;
   }
 
-  getActions() {
-    const links = [];
-    const menus = [];
-    this
-      .state
-      .actions
-      .forEach(item => {
-        if (item.isMenu) {
-          menus.push(item);
-        } else {
-          links.push(item);
-        }
-      });
+  handleClick(e) {
+    const key = e.key;
 
-    return {links, menus};
+    const item = this.setAction(key, true);
+    const action = item.action || this.props.onClick;
+
+    const cancelCallback = () => {
+      this.setAction(item, false);
+    }
+
+    if (!action(e, this.props.data, cancelCallback)) {
+      cancelCallback();
+    }
   }
 
   render() {
-    const handleClick = (e) => {
-      const key = e.key;
-      const cancelCallback = () => {
-        this.setActions(key, false);
-      }
-
-      const item = this.setActions(key, true);
-      const action = item.action || this.props.onClick;
-      if (!action(e, this.props.data, cancelCallback)) {
-        cancelCallback();
-      }
-    };
-    const {links, menus} = this.getActions();
+    const handleClick = this
+      .handleClick
+      .bind(this);
+    const {links, menus} = this.props;
     const menu = (
       <Menu onClick={(e) => handleClick(e)}>
         {menus.map((item, index) => {
           return (
-            <Menu.Item key={item.key || index} disabled={item.disabled} loading={item.loading}>
+            <Menu.Item
+              key={item.key || index}
+              disabled={item.disabled}
+              loading={item.loading}>
               <a>{item.name}</a>
             </Menu.Item>
           )
@@ -88,11 +85,9 @@ export default class NavLink extends Component {
     return (
       <div className="antd-nav-link">
         {links.map((item, index) => <Button
-          size={
-            item.size
+          size={item.size
           ? item.size
-          : 'small'
-          }
+          : 'small'}
           type={item.type
           ? item.type
           : 'button'}

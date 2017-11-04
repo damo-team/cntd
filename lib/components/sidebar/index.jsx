@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 import Menu from 'antd/lib/menu';
-
+import './index.less';
 /**
  * + **基础BFT（广度遍历）算法**
  *
@@ -15,7 +15,7 @@ function BFS(menus, callback, parentMenu = []) {
   menus.every(menu => {
     if (result = callback(menu, parentMenu)) {
       return false;
-    } else{
+    } else {
       let children = menu.children || menu.childRoutes;
       if (children && (result = BFS(children, callback, parentMenu.concat(menu)))) {
         return false;
@@ -29,7 +29,7 @@ function BFS(menus, callback, parentMenu = []) {
 const LOCAL_MENU_KEY = 'openMenu';
 const LOCAL_STRETCH_KEY = 'stretchMenu';
 
-export default class SideBar extends Component {
+export class SideBar extends Component {
   static BFS = BFS;
 
   static propsTypes = {
@@ -41,15 +41,21 @@ export default class SideBar extends Component {
     hasStretch: PropTypes.bool,
     theme: PropTypes.string,
     onStretch: PropTypes.func,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    itemKey: PropTypes.string
   }
 
   static defaultProps = {
+    itemKey: 'key',
     menus: [],
     openKeys: [],
     hasStretch: false,
     theme: 'light',
-    heading: (<div className="j-kit-elem-heading"><i className="iconfont">&#xe624;</i></div>)
+    heading: (
+      <div className="j-kit-elem-heading">
+        <i className="iconfont">&#xe624;</i>
+      </div>
+    )
   }
 
   constructor(props, context) {
@@ -57,15 +63,17 @@ export default class SideBar extends Component {
     const pathname = props.currentPath;
     const openKeys = [];
     const selectedKeys = this.props.selectedKeys || BFS(this.props.menus, (menu, parentMenu) => {
-      if(pathname ===  menu.path){
-        parentMenu.forEach(item => openKeys.push(item.key));
+      if (pathname === menu.path) {
+        parentMenu.forEach(item => openKeys.push(item[props.itemKey]));
         return [menu.url || menu.path];
       }
     }) || ['introduction'];
 
     this.state = {
       hasStretch: this.getLocalItem(LOCAL_STRETCH_KEY, this.props.hasStretch),
-      openKeys: openKeys.length ? openKeys : this.getLocalItem(LOCAL_MENU_KEY, this.props.openKeys),
+      openKeys: openKeys.length
+        ? openKeys
+        : this.getLocalItem(LOCAL_MENU_KEY, this.props.openKeys),
       selectedKeys: selectedKeys,
       menus: this.renderMenuItem(this.props.menus)
     }
@@ -89,8 +97,8 @@ export default class SideBar extends Component {
 
   componentWillReceiveProps(nextProps) {
     let menus = this.props.menus;
-     if (menus !== nextProps.menus) {
-       menus = nextProps.menus;
+    if (menus !== nextProps.menus) {
+      menus = nextProps.menus;
       this.setState({
         menus: this.renderMenuItem(menus)
       });
@@ -104,29 +112,29 @@ export default class SideBar extends Component {
     } else if (this.props.currentPath !== nextProps.currentPath) {
       const openKeys = [];
       const selectedKeys = this.props.selectedKeys || BFS(menus, (menu, parentMenu) => {
-        if(nextProps.currentPath ===  menu.path){
-          parentMenu.forEach(item => openKeys.push(item.key));
+        if (nextProps.currentPath === menu.path) {
+          parentMenu.forEach(item => openKeys.push(item[
+            [this.props.itemKey]
+          ]));
           return [menu.url || menu.path];
         }
       }) || ['introduction'];
 
-      this.setState({
-        selectedKeys: selectedKeys,
-        openKeys: openKeys
-      });
+      this.setState({selectedKeys: selectedKeys, openKeys: openKeys});
     }
   }
 
   render() {
     return (
       <div
-        className={`j-kit-dtboost-sidebar ${this.state.hasStretch
-        ? 'j-kit-dtboost-sidebar-stretch'
+        className={`j-kit-sidebar ${this.state.hasStretch
+        ? 'j-kit-sidebar-stretch'
         : ''}`}>
         <h3 onClick={(e) => this.handleStretch()}>
           {this.props.heading}
         </h3>
         <Menu
+          inlineIndent={this.props.inlineIndent}
           theme={this.props.theme}
           selectedKeys={this.state.selectedKeys}
           onOpen={(e) => this.handleOpenMenu()}
@@ -143,32 +151,42 @@ export default class SideBar extends Component {
   }
 
   handleClick(menu, isSubMenu) {
-    if(menu.path){
+    if (menu.path) {
       this.setState({
         selectedKeys: [menu.path]
       })
     }
-    this.props.onClick && this.props.onClick(menu, isSubMenu);
+    this.props.onClick && this
+      .props
+      .onClick(menu, isSubMenu);
   }
-  
+
   handleOpenMenu(menu) {
-    const idx = this.state.openKeys.findIndex(key => key === menu.key);
-    if(idx === -1){
-      const openKeys = this.state.openKeys.concat(menu.key);
-      this.setState({
-        openKeys: openKeys
-      });
+    const idx = this
+      .state
+      .openKeys
+      .findIndex(key => key === menu[this.props.itemKey]);
+    if (idx === -1) {
+      const openKeys = this
+        .state
+        .openKeys
+        .concat(menu[this.props.itemKey]);
+      this.setState({openKeys: openKeys});
       this.setLocalItem(LOCAL_MENU_KEY, openKeys);
     }
   }
 
   handleCloseMenu(menu) {
-    const idx = this.state.openKeys.findIndex(key => key === menu.key);
-    if(idx > -1){
-      const openKeys = this.state.openKeys.splice(idx, 1);
-      this.setState({
-        openKeys: openKeys
-      });
+    const idx = this
+      .state
+      .openKeys
+      .findIndex(key => key === menu[this.props.itemKey]);
+    if (idx > -1) {
+      const openKeys = this
+        .state
+        .openKeys
+        .splice(idx, 1);
+      this.setState({openKeys: openKeys});
       this.setLocalItem(LOCAL_MENU_KEY, openKeys);
     }
   }
@@ -199,7 +217,7 @@ export default class SideBar extends Component {
       if (children) {
         return (
           <Menu.SubMenu
-            key={menu.key}
+            key={menu[this.props.itemKey]}
             title={(
             <span>
               {menu.icon}
@@ -211,9 +229,18 @@ export default class SideBar extends Component {
             {this.renderMenuItem(children)}
           </Menu.SubMenu>
         )
-      } else if(menu.url || menu.path){
+      } else if (menu.url || menu.path) {
         return (
-          <Menu.Item className={`${menu.key}-wrap`} key={menu.path} disabled={menu.disabled}>
+          <Menu.Item
+            className={`${menu[
+            this
+              .props
+              .itemKey
+              .split('/')
+              .join('_')
+          ]}-wrap`}
+            key={menu[this.props.itemKey]}
+            disabled={menu.disabled}>
             <Link
               to={menu.url || menu.path}
               target={menu.target || ''}
@@ -223,17 +250,13 @@ export default class SideBar extends Component {
             </Link>
           </Menu.Item>
         )
-      }else {
+      } else {
         return (
-          <Menu.Item
-            key={menu.key}
-            title={(
+          <Menu.Item key={menu[this.props.itemKey]} disabled={menu.disabled}>
             <span>
               {menu.icon}
               <span className="j-kit-elem-text">{menu.text || menu.name}</span>
             </span>
-          )}
-            disabled={menu.disabled}>
           </Menu.Item>
         )
       }

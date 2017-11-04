@@ -1,0 +1,59 @@
+{
+  "version": "0.0.1",
+  "name": "Damo App",
+  "index": "./demo/index.html",
+  "main": "./demo/app.jsx",
+  "server": {
+    "host": "http://localhost:8009"
+  },
+  "jsx": true,
+  "output": {
+    "app": "app",
+    "vendor": "vendor"
+  },
+  "vendors": [
+    "antd",
+    "damo-core",
+    "react",
+    "react-dom",
+    "hoist-non-react-statics",
+    "seamless-immutable",
+    "async-validator",
+    "react-router",
+    "history",
+    "cuid",
+    "clipboard",
+    "react-dnd",
+    "react-dnd-html5-backend",
+    
+    "damo-redux",
+    "events",
+    "isomorphic-fetch",
+    "react-addons-pure-render-mixin",
+    "react-intl",
+    "react-mixin",
+    "react-redux",
+    "react-redux-loading-bar",
+    "react-router-redux",
+    "recompose",
+    "redux",
+    "redux-logger",
+    "redux-promise-middleware",
+    "redux-router",
+    "redux-thunk",
+    "reselect",
+    "rxjs"
+  ],
+  "provide": {
+    "React": "react",
+    "ReactDOM": "react-dom"
+  },
+  "devtool": "#cheap-source-map",
+  "partition": {
+    "NODE_ENV": "development"
+  },
+  "proxy": [{
+    "host": "http://api.github.com/",
+    "routes": [ "/repo" ]
+  }]
+}

@@ -1,18 +1,20 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
-import AutoComplete from 'antd/lib/auto-complete';
+import Select from 'antd/lib/select';
 import Pagination from 'antd/lib/pagination';
 import Icon from 'antd/lib/icon';
+import './index.less';
 
-export default class Search extends Component {
+export class Search extends Component {
   static proptTypes = {
-    value: PropTypes.string,
+    value: PropTypes.any,
+    selectedItem: PropTypes.object,
     options: PropTypes.array,
     select: PropTypes.object,
+    multiple: PropTypes.bool,
     rowKey: PropTypes.string.isRequired,
     labelKey: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
-
     onChange: PropTypes.func.isRequired
   }
 
@@ -22,7 +24,12 @@ export default class Search extends Component {
 
   static defaultProps = {
     options: [],
-    select: {},
+    multiple: false,
+    keyword: '',
+    select: {
+      showSearch: true,
+      allowClear: true
+    },
     params: {},
     rowKey: 'id',
     labelKey: 'name',
@@ -30,179 +37,386 @@ export default class Search extends Component {
   }
 
   constructor(props, context) {
-    super(props);
-    const selectedItem = props.options.find(item => item[props.rowKey] == props.value);
+    super(props, context);
+
+    let value;
+    if (props.multiple) {
+      value = props.value || [];
+    } else {
+      value = props.value || '';
+    }
+
+    // value是真实的值，keyword是搜索词，value优先级高，否则才有keyword
     this.state = {
       current: 1,
-      defaultValue: selectedItem ? '' : props.value,
-      value: selectedItem ? selectedItem[props.labelKey] : props.value,
-      selected: !!selectedItem,
+      value: value,
+      multiMap: {},
       list: props.options,
-      keyword: '',
+      keyword: props.keyword,
       disabled: props.disabled,
-      total: props.select.total,
+      total: 0,
       loading: true
     }
-    if(!selectedItem){
-      this.getData(context.dataModel, this.state.disabled, {
-        page: 1,
-        keyword: this.state.keyword
-      });
+    if (!props.multiple && props.selectedItem) {
+      this.state.keyword = '';
+      this.select(props.selectedItem, true);
+    } else if (!props.options.length && !props.disabled) {
+      if (props.multiple) {
+        if (value) {
+          this.getData({page: 1, ids: value, value: value, keyword: ''});
+        } else {
+          this.getData({page: 1, keyword: props.keyword});
+        }
+      } else {
+        if (value) {
+          this.getItem({id: value});
+        } else {
+          this.getData({page: 1, keyword: ''});
+        }
+      }
+    }
+  }
+
+  toSelect(item, flag) {
+    if (item[this.props.rowKey]) {
+      if (item[this.props.labelKey]) {
+        // value 和 keyword只能二选一
+        if (flag) {
+          Object.assign(this.state, {
+            value: item[this.props.rowKey] + '',
+            list: [item]
+          });
+        } else {
+          this.setState({
+            value: item[this.props.rowKey] + '',
+            list: [item]
+          });
+        }
+      } else {
+        this.getItem({
+          id: item[this.props.rowKey]
+        });
+      }
+    }
+  }
+
+  select(item, flag) {
+    if (item instanceof Promise) {
+      item.then(this.toSelect.bind(this));
+    } else {
+      this.toSelect(item, flag);
     }
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.value != this.props.value) {
-      if(!this.state.value){
-        const selectedItem = nextProps.options.find(item => item[this.props.rowKey] == nextProps.value);
-        this.setState({
-          defaultValue: selectedItem? '' :nextProps.value,
-          value: selectedItem? selectedItem[this.props.labelKey] : '',
-          list: nextProps.options,
-          selected: !!selectedItem,
-          disabled: nextProps.disabled
-        });
+    let enabled = false;
+    if (this.props.disabled) {
+      if (!nextProps.disabled) {
+        enabled = true;
       }
-    } else if (nextProps.disabled != this.props.disabled) {
-      this.setState({disabled: nextProps.disabled});
-      this.getData(this.context.dataModel, !nextProps.disabled, {
-        page: this.state.current,
-        keyword: this.state.keyword
-      });
-    } else if (nextProps.options != this.props.options) {
-      if(!this.state.selected && this.state.defaultValue && this.state.defaultValue === this.state.value){
-        const selectedItem = nextProps.options.find(item => item[this.props.rowKey] == this.state.defaultValue);
+    } else if (!nextProps.disabled) {
+      enabled = true;
+    }
 
-        this.setState({
-          defaultValue: selectedItem? '' : this.state.defaultValue,
-          value: selectedItem? selectedItem[this.props.labelKey] : '',
-          list: nextProps.options,
-          selected: !!selectedItem,
-          disabled: nextProps.disabled
-        });
+    if (enabled) {
+      const hasValue = this.props.multiple
+        ? this.props.value && this.props.value.length
+        : this.props.value;
+      if (nextProps.value && !hasValue) {
+        // 此时value必须输入selectedItem
+        if (nextProps.multiple) {
+          this.getData({page: 1, value: nextProps.value, ids: nextProps.value, keyword: ''});
+        } else {
+          if (nextProps.selectedItem) {
+            if (nextProps.selectedItem[this.props.rowKey] != nextProps.value) {
+              this.select(nextProps.selectedItem)
+            }
+          } else if (nextProps.noSearch) {
+            if (nextProps.options.length) {
+              const value = params.value || (this.props.multiple
+                ? []
+                : '');
+              this.setState({list: nextProps.options, value: value, keyword: '', total: 0, loading: false});
+            } else {
+              this.getData({page: 1, keyword: '', value: nextProps.value});
+            }
+          } else {
+            if (nextProps.value != this.state.value) {
+              this.getItem({id: nextProps.value});
+            }
+          }
+        }
+      } else if (nextProps.keyword != this.props.keyword) {
+        this.getData({page: 1, keyword: nextProps.keyword});
+      } else if (this.props.disabled) {
+        this.getData({page: 1, keyword: ''});
       }
     }
   }
 
-  getData(dataModel, disabled, params) {
-    if (dataModel && !disabled) {
-      const promise = dataModel.getData(Object.assign(this.props.params, params));
-      promise.then(data => {
-        if (this.state.total !== undefined) {
-          this.setState({list: data.list, current: params.page, total: data.total, keyword: params.keyword, loading: false});
-          data = data.list;
-        } else {
-          this.setState({list: data})
-        }
-        if(!data.length){
-          this.setState({
-            defaultValue: '',
-            selected: false
-          });
-          this.props.onChange('');
-        }else if(this.state.selected || this.state.defaultValue && this.state.defaultValue === this.state.value){
-          const selectedItem = data.find(item => item[this.props.rowKey] == this.state.value);
+  getItem(params) {
+    this.setState({keyword: ''});
+    const dataModel = this.context.dataModel;
+    if (dataModel && dataModel.getItem) {
+      const _params = Object.assign(this.props.params, params);
 
-          this.setState({
-            defaultValue: selectedItem? '' : this.state.value,
-            value: selectedItem? selectedItem[this.props.labelKey] : '',
-            selected: !!selectedItem
-          });
-          if(!selectedItem){
-            this.props.onChange('');
+      const promise = dataModel.getItem(_params);
+      promise.then(data => {
+        if (this.state.keyword) {
+          return;
+        }
+
+        this.setState({
+          list: [data],
+          value: params.id + '',
+          total: 0,
+          loading: false
+        });
+      });
+      return promise;
+    } else {
+      this.setState({
+        value: params.id + '',
+        total: 0,
+        loading: false
+      });
+    }
+  }
+
+  getData(params) {
+    this.setState({loading: true});
+    const dataModel = this.context.dataModel;
+    const rowKey = this.props.rowKey;
+    if (dataModel) {
+      const keyword = params.keyword;
+      const _params = Object.assign(this.props.params, params);
+      if (keyword) {
+        _params.keyword = encodeURIComponent(keyword)
+      }
+      const promise = dataModel.getData(_params);
+      promise.then(data => {
+        const hasValue = this.props.multiple
+          ? this.state.value.length
+          : this.state.value;
+        if (!params.ids && (hasValue || params.keyword !== this.state.keyword)) {
+          this.setState({loading: false});
+          return;
+        }
+        const value = params.value || (this.props.multiple
+          ? []
+          : '');
+        const newState = {
+          value: value,
+          keyword: params.keyword,
+          total: 0,
+          loading: false
+        };
+        if (this.props.noSearch) {
+          newState.list = data;
+        } else {
+          if (data.list.length == data.total) {
+            newState.list = data.list;
+          } else {
+            newState.list = data.list;
+            newState.total = data.total;
+            newState.current = params.page;
           }
         }
+        if (this.props.multiple) {
+          let multiMap = {};
+          if (params.ids) {
+            newState
+              .list
+              .forEach(item => {
+                if (params.ids.indexOf(item[rowKey]) > -1) {
+                  multiMap[item[rowKey]] = item;
+                }
+              })
+            newState.multiMap = multiMap;
+          } else if (this.state.value.length) {
+            newState.list = newState
+              .list
+              .filter(item => {
+                if (this.state.multiMap[item[rowKey]]) {
+                  return false;
+                } else {
+                  return true;
+                }
+              });
+            for (let key in this.state.multiMap) {
+              newState
+                .list
+                .unshift(this.state.multiMap[key]);
+            }
+          }
+        }
+        this.setState(newState);
+
+        return newState.list;
       });
       return promise;
     }
   }
 
   handleSearch(params, callback) {
-    callback = callback || function(){};
+    if (this.props.noSearch) {
+      return;
+    }
+    callback = callback || function () {};
     clearTimeout(this.$timer_);
-    this.setState({loading: true});
 
     this.$timer_ = setTimeout(() => {
-      const promise = this.getData(this.context.dataModel, this.state.disabled, params)
+      const value = this.props.multiple
+        ? this.state.value
+        : '';
+      this.setState({
+        keyword: params.keyword,
+        current: params.page || 1,
+        value: value
+      });
+      if (!this.props.multiple && this.state.value) {
+        this
+          .props
+          .onChange(value);
+      }
+      const promise = this.getData(params);
       promise && promise.then(res => callback(null, res), err => callback(err));
     }, 200);
   }
 
   render() {
-    const {rowKey, labelKey, onChange, select} = this.props;
     const {
-      disabled,
+      rowKey,
+      labelKey,
+      onChange,
+      noSearch,
+      select,
+      multiple,
+      disabled
+    } = this.props;
+    const {
       value,
       keyword,
       current,
-      total,
-      selected,
       loading,
+      total,
       list
     } = this.state;
 
-    const selectProps = Object.assign(select, {disabled: disabled});
-
-    return (
-      <AutoComplete
-        ref={search => this.$search_ = search}
-        {...selectProps}
-        value={value}
-        dropdownClassName="j-kit-minSearch"
-        optionLabelProp="label"
-        filterOption={(value, option) => {
-        if (option.key === 'miniPager') {
-          return true;
-        } else {
-          return option.key == value || option.props.children.toLocaleLowerCase().indexOf(value) > -1;
-        }
-      }}
-        onSelect={(value, option) => {
-        if (value === 'miniPager') {
-          setTimeout(() => {
-            this.$search_._reactInternalInstance._renderedComponent._renderedComponent._instance.setOpenState(true);
-          }, 100);
-          return;
-        }
-        this.$val_ = value;
-        setTimeout(() => {
-          this.setState({value: option.props.children, selected: true});
-        }, 100);
-        onChange(value, option, list.find(item => item[rowKey] == value));
-      }}
-        onChange={(value) => {
-        if (value === undefined) {
-          this.setState({current: 1, value: undefined, selected: false});
-          this.handleSearch({page: 1, keyword: ''});
-
-          onChange('')
-        }else if (this.$val_ !== value && value !== 'miniPager') {
-          this.setState({current: 1, value: value, selected: false});
-          this.handleSearch({page: 1, keyword: value});
-        }
-      }}>
-        {list.map(item => (
-          <AutoComplete.Option key={item[rowKey]} label={item[rowKey] + ''}>{item[labelKey]}</AutoComplete.Option>
-        ))}
-        <AutoComplete.Option key="miniPager" label={keyword}>
-          {total !== undefined && !selected && (<Pagination
+    const selectProps = Object.assign(select, {
+      disabled: disabled,
+      multiple: multiple,
+      value: value || keyword || undefined
+    });
+    const options = list.concat({
+      [rowKey]: 'miniPager',
+      [labelKey]: !noSearch && total
+        ? (
+          <Pagination
             size="small"
             current={current}
             total={total}
             showLessItems={true}
             onChange={(page) => {
-            this.setState({current: page, selected: false});
-            this.handleSearch({
-              page: page,
-              keyword: keyword
-            })
+            this.handleSearch({page: page, keyword: keyword})
           }}
             showTotal={() => loading
             ? (<Icon type="loading"/>)
-            : `共匹配 ${total} 条`}
-          />)}
-        </AutoComplete.Option>
-      </AutoComplete>
+            : `共匹配 ${total} 条`}/>
+        )
+        : null
+    })
+    let selectedValue = null;
+    return (
+      <Select
+        ref={search => this.$search_ = search}
+        {...selectProps}
+        placeholder={selectProps.placeholder}
+        dropdownClassName="j-kit-minSearch"
+        filterOption={(value, option) => {
+        if (option.key === 'miniPager' || React.isValidElement(value)) {
+          return true;
+        } else {
+          return option.key == value || option
+            .props
+            .children
+            .toLocaleLowerCase()
+            .indexOf(value.toLocaleLowerCase()) > -1;
+        }
+      }}
+        onSelect={(value, option) => {
+        selectedValue = value;
+        if (value === 'miniPager') {
+          setTimeout(() => {
+            this.setOpenState();
+          }, 100);
+          return;
+        }
+        let item;
+        if (multiple) {
+          item = list.find(item => item[rowKey] == value);
+          this.state.multiMap[value] = item;
+          value = this
+            .state
+            .value
+            .concat(value);
+        } else {
+          item = {
+            [rowKey]: option.props.value,
+            [labelKey]: option.props.children
+          };
+        }
+        this.setState({current: 1, value: value, keyword: ''});
+        onChange(value, item);
+      }}
+        onDeselect={value => {
+        selectedValue = null;
+        if (multiple) {
+          const idx = this
+            .state
+            .value
+            .findIndex(v => v == value);
+          delete this.state.multiMap[value];
+          value = this
+            .state
+            .value
+            .slice(0, idx)
+            .concat(this.state.value.slice(idx + 1));
+          this.setState({current: 1, value: value, keyword: ''});
+          onChange(value);
+        }
+      }}
+        onChange={value => {
+        selectedValue = null;
+        if (value === undefined) {
+          this.getData({page: 1, keyword: ''});
+          this.setState({current: 1, value: '', multiMap: {}, keyword: ''});
+          onChange(value);
+        }
+      }}
+        onSearch={value => {
+        if (selectedValue) 
+          return;
+        this.handleSearch({
+          page: 1,
+          keyword: value || ''
+        }/*, () => { if (multiple && !value) { this.setOpenState(); } }*/)
+      }}>
+        {options.map(item => (
+          <Select.Option key={item[rowKey]}>{item[labelKey]}</Select.Option>
+        ))}
+      </Select>
     )
+  }
+
+  setOpenState() {
+    if (this.$search_._reactInternalInstance._renderedComponent._instance.setOpenState) {
+      this
+        .$search_
+        ._reactInternalInstance
+        ._renderedComponent
+        ._instance
+        .setOpenState(true);
+    }
   }
 }
