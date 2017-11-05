@@ -1,8 +1,9 @@
 import React, {Component, PropTypes} from "react";
 import ReactDOM from 'react-dom';
 import Table from 'antd/lib/table';
-import {DataSet} from '../../../lib';
+import {DataSet, schemaParser} from '../../../lib';
 
+console.log(schemaParser(Table));
 export default class Dataset extends Component {
   static routePath = '/dataset';
 

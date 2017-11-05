@@ -1,0 +1,126 @@
+.j-com-fieldCustom{
+  .j-com-fieldCustom{
+    border: 1px solid #ddd;
+    margin: 10px;
+    margin-left: -86px;
+    padding: 10px 0 10px 10px;
+    .ant-input-preSuffix-wrapper{
+      width: 40%;
+    }
+    .ant-input-preSuffix-wrapper + div{
+      width: 60%;
+    }
+  }
+  .ant-form-item{
+    margin-bottom: 0 !important;
+  }
+  .ant-form-item + .ant-form-item{
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .elem-innerForm{
+    position: relative;
+    .ant-btn-dashed{
+      position: absolute;
+      top: 6px;
+      right: 10px;
+    }
+    .elem-input-group{
+      .ant-input-preSuffix-wrapper{
+        width: 40%;
+      }
+      .ant-input-preSuffix-wrapper + div{
+        width: 60%;
+      }
+    }
+  }
+  .elem-input-group{
+    width: 95%;
+    .ant-input-preSuffix-wrapper{
+      width: 30%;
+      margin-top: 1px;
+      margin-right: -1px;
+    }
+    .ant-input-preSuffix-wrapper + div{
+      width: 70%;
+      display: inline-block;
+      .ant-select-selection{
+        height: 32px;
+        border-radius: 0;
+        top: -1px;
+        position: relative;
+      }
+      .ant-input-preSuffix-wrapper{
+        .ant-select-selection{
+          height: 22px;
+          border-radius: 4px;
+          top: auto;
+        }
+      }
+      .ant-input-number,
+      .ant-time-picker-input{
+        height: 32px;
+      }
+    }
+    .elem-field-btns{
+      position: absolute;
+      width: 80px;
+      right: -80px;
+      li{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+    }
+    .ant-input-preSuffix-wrapper .ant-input:not(:last-child){
+      padding-right: 86px;
+    }
+    .ant-input-number{
+      margin-right: 0;
+      width: 144px;
+    }
+    .j-kit-upload{
+      .ant-btn{
+        margin-left: 0;
+        border: 0;
+        padding: 0;
+      }
+      .ant-upload-list{
+        display: none;
+      }
+    }
+    .elem-input-option{
+      width: 80px !important;
+      .ant-select .ant-select-selection ul{
+        position: static;
+        width: 100%;
+        li{
+          display: block;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .elem-input-group-0 .elem-field-btns li:last-child{
+    display: none;
+    .elem-innerForm .j-com-fieldCustom .elem-field-btns li{
+      display: inline-block;
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+  .elem-field-group .elem-innerForm .ant-select-selection--multiple{
+    padding-right: 100px;
+  }
+
+  .j-com-fieldCustom-hide{
+    display: none;
+  }
+  .elem-field-object h5,
+  .elem-field-checkbox,
+  .elem-field-radio{
+    padding-left: 20px;
+  }
+}

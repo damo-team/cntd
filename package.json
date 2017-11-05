@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
   "name": "damo-cntd",
-  "main": "dist/rckit.js",
+  "main": "dist/cntd.js",
   "author": {
     "name": "baqian <st403471258@gmail.com>"
   },

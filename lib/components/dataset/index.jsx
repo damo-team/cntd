@@ -1,9 +1,10 @@
 import React, {PropTypes, Component} from 'react';
 import ReactDom from 'react-dom';
-import {ResourceModel, BaseSelector} from 'damo-core';
+import {ResourceModel, BaseSelector, ucfirst} from 'damo-core';
 import themeOptions from './theme';
+import schemaParser from './schemaParser';
 
-export class DataSet extends Component {
+class DataSet extends Component {
   static formatters = {};
 
   static themeOptions = {};
@@ -33,11 +34,6 @@ export class DataSet extends Component {
 
     this.state = {};
     this.stateUpdater = {};
-
-    // 组件类型来选择具体模板
-    if (props.type && DataSet.themeOptions[type]) {
-      Object.assign(this.state, DataSet.themeOptions[type]);
-    }
 
     /**
      * prop = {
@@ -186,11 +182,19 @@ export class DataSet extends Component {
   }
 
   render() {
+    let option = {},
+      type;
     if (this.props.component) {
+      type = this.props.component.name;
+      if (type && DataSet.themeOptions[type]) {
+        option = DataSet.themeOptions[type];
+      }
+
       if (this.props.children) {
         return (
           <this.props.component
             ref={instance => this.$instance_ = instance}
+            {...option}
             {...this.props}
             {...this.state}
             {...this.stateUpdater}>{this.props.children}</this.props.component>
@@ -198,17 +202,28 @@ export class DataSet extends Component {
       } else {
         return (<this.props.component
           ref={instance => this.$instance_ = instance}
+          {...option}
           {...this.props}
           {...this.state}
           {...this.stateUpdater}/>)
       }
     } else {
+      type = this.props.children.type.name;
+      if (type && DataSet.themeOptions[type]) {
+        option = DataSet.themeOptions[type];
+      }
       return React.cloneElement(React.Children.only(this.props.children), {
         ref: instance => this.$instance_ = instance,
+        ...option,
         ...this.props,
         ...this.state,
         ...this.stateUpdater
       });
     }
   }
+}
+
+export {
+  schemaParser,
+  DataSet
 }

@@ -1,0 +1,44 @@
+.j-com-inputCustom{
+  .elem-item{
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: 10px; 
+    .ant-form-item{
+      margin-bottom: 10px !important; 
+    }
+  }
+  
+  .ant-form{
+    position: relative;
+
+    .elem-item:last-child{
+      border-bottom: 0 none;
+    }
+    .elem-expand{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: none;
+      .anticon{
+        color: #108ee9;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+    .ant-form-item > .ant-form-item, .ant-form-item :not(.ant-form) > .ant-form-item{
+      margin-bottom: 10px;
+    }
+    .ant-form{
+      padding: 10px 10px 0;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+      .elem-expand{
+        display: block;
+        z-index: 1;
+      }
+    }
+  }
+  
+}
+.j-com-inputCustom-hide{
+  display: none;
+}

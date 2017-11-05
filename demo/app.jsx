@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import damo from 'damo-core';
-
 import {errorReducer} from '../lib';
 
 import Root from './scenes';

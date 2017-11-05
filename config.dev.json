@@ -12,7 +12,7 @@
     "vendor": "vendor"
   },
   "vendors": [
-    "antd",
+    "prop-types",
     "damo-core",
     "react",
     "react-dom",
@@ -25,7 +25,6 @@
     "clipboard",
     "react-dnd",
     "react-dnd-html5-backend",
-    
     "damo-redux",
     "events",
     "isomorphic-fetch",
@@ -52,8 +51,12 @@
   "partition": {
     "NODE_ENV": "development"
   },
-  "proxy": [{
-    "host": "http://api.github.com/",
-    "routes": [ "/repo" ]
-  }]
+  "proxy": [
+    {
+      "host": "http://api.github.com/",
+      "routes": [
+        "/repo"
+      ]
+    }
+  ]
 }
