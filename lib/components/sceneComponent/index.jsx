@@ -7,8 +7,7 @@ import Icon from 'antd/lib/icon';
 import Input from 'antd/lib/input';
 import NavLink from '../navLink';
 
-import Selector from './selector';
-class SceneComponent extends Component {
+export class SceneComponent extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     table: PropTypes.object,
@@ -188,9 +187,4 @@ class SceneComponent extends Component {
       </div>
     );
   }
-}
-
-export {
-  SceneComponent,
-  Selector
 }

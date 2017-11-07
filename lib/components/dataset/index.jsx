@@ -1,10 +1,8 @@
 import React, {PropTypes, Component} from 'react';
 import ReactDom from 'react-dom';
 import {ResourceModel, BaseSelector, ucfirst} from 'damo-core';
-import themeOptions from './theme';
-import schemaParser from './schemaParser';
 
-class DataSet extends Component {
+export class DataSet extends Component {
   static formatters = {};
 
   static themeOptions = {};
@@ -221,9 +219,4 @@ class DataSet extends Component {
       });
     }
   }
-}
-
-export {
-  schemaParser,
-  DataSet
 }

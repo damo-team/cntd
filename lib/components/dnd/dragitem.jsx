@@ -18,7 +18,7 @@ import {DragSource} from 'react-dnd';
     isDragging: monitor.isDragging()
   };
 })
-export default class DragItem extends Component {
+export class DragItem extends Component {
   static propTypes = {
     type: PropTypes.string.isRequired,
     data: PropTypes.object.isRequired,

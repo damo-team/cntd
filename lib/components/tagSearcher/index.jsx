@@ -5,7 +5,7 @@ import Input from 'antd/lib/input';
 import Tooltip from 'antd/lib/tooltip';
 import Icon from 'antd/lib/icon';
 import Alert from 'antd/lib/alert';
-import DragItem from '../dnd/dragItem';
+import {DragItem} from '../dnd/dragItem';
 
 import './index.less';
 

@@ -20,7 +20,7 @@ import {DropTarget} from 'react-dnd';
     canDrop: monitor.canDrop()
   };
 })
-export default class DropItem extends Component {
+export class DropItem extends Component {
   static propTypes = {
     types: PropTypes.array.isRequired,
     doAction: PropTypes.func.isRequired

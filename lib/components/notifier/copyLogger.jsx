@@ -4,7 +4,7 @@ import Clipboard from 'clipboard';
 import message from 'antd/lib/message';
 import Button from 'antd/lib/button';
 
-export default class CopyLogger extends Component{
+export class CopyLogger extends Component{
   componentDidMount(){
     /**
      * copy:
