@@ -137,8 +137,10 @@ export class SideBar extends Component {
           inlineIndent={this.props.inlineIndent}
           theme={this.props.theme}
           selectedKeys={this.state.selectedKeys}
-          onOpen={(e) => this.handleOpenMenu()}
-          onClose={(e) => this.handleCloseMenu()}
+          onOpenChange={(openKeys) => {
+            this.setState({openKeys: openKeys});
+            this.setLocalItem(LOCAL_MENU_KEY, openKeys);
+          }}
           defaultOpenKeys={this.state.openKeys}
           className="j-kit-elem-left-nav"
           mode={`${this.state.hasStretch
@@ -159,36 +161,6 @@ export class SideBar extends Component {
     this.props.onClick && this
       .props
       .onClick(menu, isSubMenu);
-  }
-
-  handleOpenMenu(menu) {
-    const idx = this
-      .state
-      .openKeys
-      .findIndex(key => key === menu[this.props.itemKey]);
-    if (idx === -1) {
-      const openKeys = this
-        .state
-        .openKeys
-        .concat(menu[this.props.itemKey]);
-      this.setState({openKeys: openKeys});
-      this.setLocalItem(LOCAL_MENU_KEY, openKeys);
-    }
-  }
-
-  handleCloseMenu(menu) {
-    const idx = this
-      .state
-      .openKeys
-      .findIndex(key => key === menu[this.props.itemKey]);
-    if (idx > -1) {
-      const openKeys = this
-        .state
-        .openKeys
-        .splice(idx, 1);
-      this.setState({openKeys: openKeys});
-      this.setLocalItem(LOCAL_MENU_KEY, openKeys);
-    }
   }
 
   handleStretch() {

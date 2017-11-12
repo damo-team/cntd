@@ -452,7 +452,7 @@ class _InputForm extends Component {
   }
 }
 
-const InputForm = Form.create({withRef: true})(_InputForm);
+const InputForm = Form.create({wrappedComponentRef: true})(_InputForm);
 InputForm.prototype.getRealInstance = function () {
   return this.refs.wrappedComponent.refs.formWrappedComponent;
 }

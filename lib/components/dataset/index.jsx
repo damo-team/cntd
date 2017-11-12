@@ -1,9 +1,10 @@
 import React, {PropTypes, Component} from 'react';
 import ReactDom from 'react-dom';
 import {ResourceModel, BaseSelector, ucfirst} from 'damo-core';
+import formatters from './formatter';
 
 export class DataSet extends Component {
-  static formatters = {};
+  static formatters = formatters; //{};
 
   static themeOptions = {};
 
@@ -33,6 +34,8 @@ export class DataSet extends Component {
     this.state = {};
     this.stateUpdater = {};
 
+    this.setActions();
+
     /**
      * prop = {
      *  value: Object | Function,
@@ -46,10 +49,7 @@ export class DataSet extends Component {
       .forEach(name => {
         const prop = props.attrs[name];
         const originValue = typeof prop.value === 'function'
-          ? props
-            .attrs[name]
-            .value
-            .call(this, this.props)
+          ? prop.value.call(this, this.props)
           : prop.value;
         const formatter = prop.formatter || prop.format && DataSet.formatters[prop.format];
         // formatter是一系列解决组件schema的格式化函数
@@ -73,15 +73,8 @@ export class DataSet extends Component {
       });
   }
 
-  getModel(modelName) {
-    if (Object(modelName) === modelName) {
-      modelName = modelName.displayName;
-    }
-    return BaseSelector.appStore.models[modelName];
-  }
-
-  isState(obj) {
-    return Object(obj) === obj;
+  getModel() {
+    this.$dataModel_;
   }
   /**
    * action = {
@@ -96,7 +89,7 @@ export class DataSet extends Component {
    *  immediate
    * }
    */
-  getChildContext() {
+  setActions() {
     if (this.$dataModel_) {
       this
         .$dataModel_
@@ -126,10 +119,9 @@ export class DataSet extends Component {
             if (err) {
               error && error(err);
             } else if (success) {
-              const result = success(res);
-              if (this.isState(result)) {
-                this.setState(result);
-              }
+              const result = success(res, (state) => {
+                this.setState(state);
+              });
             }
             callback && callback(err, res)
           }
@@ -158,7 +150,10 @@ export class DataSet extends Component {
       });
       Object.assign(this.$dataModel_, requestObj);
     }
-    return {dataModel: this.$dataModel_};
+  }
+
+  getAction(action){
+    return this.$dataModel_[action] && this.$dataModel_[action].bind(this.$dataModel_);
   }
 
   getRealInstance() {

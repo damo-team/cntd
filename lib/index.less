@@ -21,8 +21,8 @@
     color: #ddd;
   }
 }
-.antd-nav-link > .ant-btn{
-  margin-left: 10px;
+.antd-nav-link{
+  margin-left: -8px;
 }
 
 
@@ -183,6 +183,23 @@
     .j-kit-elem-switch{
       left: auto;
       right: 0;
+    }
+  }
+}
+
+
+.ant-table-tbody > tr{
+  td.td-ellipsis{
+    position: relative;
+    .text-ellipsis{
+      word-break: break-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      margin-top: -9px;
     }
   }
 }

@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("react-dom"), require("antd/lib/icon"), require("damo-core"), require("antd/lib/button"), require("react-dnd"), require("antd/lib/input"), require("antd/lib/menu"), require("antd/lib/message"), require("history"), require("hoist-non-react-statics"), require("react-router"), require("antd/lib/alert"), require("antd/lib/breadcrumb"), require("antd/lib/collapse"), require("antd/lib/dropdown"), require("antd/lib/form"), require("antd/lib/modal"), require("antd/lib/notification"), require("antd/lib/pagination"), require("antd/lib/select"), require("antd/lib/table"), require("antd/lib/tooltip"), require("async-validator"), require("clipboard"), require("cuid"), require("prop-types"), require("react-dnd-html5-backend"), require("seamless-immutable"));
+		module.exports = factory(require("react"), require("react-dom"), require("antd/lib/icon"), require("antd/lib/button"), require("damo-core"), require("antd/lib/input"), require("react-dnd"), require("antd/lib/form"), require("antd/lib/menu"), require("antd/lib/message"), require("antd/lib/modal"), require("antd/lib/select"), require("history"), require("hoist-non-react-statics"), require("prop-types"), require("react-router"), require("antd/lib/alert"), require("antd/lib/breadcrumb"), require("antd/lib/card"), require("antd/lib/cascader"), require("antd/lib/checkbox"), require("antd/lib/collapse"), require("antd/lib/date-picker"), require("antd/lib/dropdown"), require("antd/lib/input-number"), require("antd/lib/notification"), require("antd/lib/pagination"), require("antd/lib/radio"), require("antd/lib/switch"), require("antd/lib/table"), require("antd/lib/time-picker"), require("antd/lib/tooltip"), require("async-validator"), require("clipboard"), require("cuid"), require("react-dnd-html5-backend"), require("seamless-immutable"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "react-dom", "antd/lib/icon", "damo-core", "antd/lib/button", "react-dnd", "antd/lib/input", "antd/lib/menu", "antd/lib/message", "history", "hoist-non-react-statics", "react-router", "antd/lib/alert", "antd/lib/breadcrumb", "antd/lib/collapse", "antd/lib/dropdown", "antd/lib/form", "antd/lib/modal", "antd/lib/notification", "antd/lib/pagination", "antd/lib/select", "antd/lib/table", "antd/lib/tooltip", "async-validator", "clipboard", "cuid", "prop-types", "react-dnd-html5-backend", "seamless-immutable"], factory);
+		define(["react", "react-dom", "antd/lib/icon", "antd/lib/button", "damo-core", "antd/lib/input", "react-dnd", "antd/lib/form", "antd/lib/menu", "antd/lib/message", "antd/lib/modal", "antd/lib/select", "history", "hoist-non-react-statics", "prop-types", "react-router", "antd/lib/alert", "antd/lib/breadcrumb", "antd/lib/card", "antd/lib/cascader", "antd/lib/checkbox", "antd/lib/collapse", "antd/lib/date-picker", "antd/lib/dropdown", "antd/lib/input-number", "antd/lib/notification", "antd/lib/pagination", "antd/lib/radio", "antd/lib/switch", "antd/lib/table", "antd/lib/time-picker", "antd/lib/tooltip", "async-validator", "clipboard", "cuid", "react-dnd-html5-backend", "seamless-immutable"], factory);
 	else if(typeof exports === 'object')
-		exports["cntd"] = factory(require("react"), require("react-dom"), require("antd/lib/icon"), require("damo-core"), require("antd/lib/button"), require("react-dnd"), require("antd/lib/input"), require("antd/lib/menu"), require("antd/lib/message"), require("history"), require("hoist-non-react-statics"), require("react-router"), require("antd/lib/alert"), require("antd/lib/breadcrumb"), require("antd/lib/collapse"), require("antd/lib/dropdown"), require("antd/lib/form"), require("antd/lib/modal"), require("antd/lib/notification"), require("antd/lib/pagination"), require("antd/lib/select"), require("antd/lib/table"), require("antd/lib/tooltip"), require("async-validator"), require("clipboard"), require("cuid"), require("prop-types"), require("react-dnd-html5-backend"), require("seamless-immutable"));
+		exports["cntd"] = factory(require("react"), require("react-dom"), require("antd/lib/icon"), require("antd/lib/button"), require("damo-core"), require("antd/lib/input"), require("react-dnd"), require("antd/lib/form"), require("antd/lib/menu"), require("antd/lib/message"), require("antd/lib/modal"), require("antd/lib/select"), require("history"), require("hoist-non-react-statics"), require("prop-types"), require("react-router"), require("antd/lib/alert"), require("antd/lib/breadcrumb"), require("antd/lib/card"), require("antd/lib/cascader"), require("antd/lib/checkbox"), require("antd/lib/collapse"), require("antd/lib/date-picker"), require("antd/lib/dropdown"), require("antd/lib/input-number"), require("antd/lib/notification"), require("antd/lib/pagination"), require("antd/lib/radio"), require("antd/lib/switch"), require("antd/lib/table"), require("antd/lib/time-picker"), require("antd/lib/tooltip"), require("async-validator"), require("clipboard"), require("cuid"), require("react-dnd-html5-backend"), require("seamless-immutable"));
 	else
-		root["cntd"] = factory(root["react"], root["react-dom"], root["antd/lib/icon"], root["damo-core"], root["antd/lib/button"], root["react-dnd"], root["antd/lib/input"], root["antd/lib/menu"], root["antd/lib/message"], root["history"], root["hoist-non-react-statics"], root["react-router"], root["antd/lib/alert"], root["antd/lib/breadcrumb"], root["antd/lib/collapse"], root["antd/lib/dropdown"], root["antd/lib/form"], root["antd/lib/modal"], root["antd/lib/notification"], root["antd/lib/pagination"], root["antd/lib/select"], root["antd/lib/table"], root["antd/lib/tooltip"], root["async-validator"], root["clipboard"], root["cuid"], root["prop-types"], root["react-dnd-html5-backend"], root["seamless-immutable"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_13__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_40__, __WEBPACK_EXTERNAL_MODULE_41__, __WEBPACK_EXTERNAL_MODULE_42__, __WEBPACK_EXTERNAL_MODULE_43__, __WEBPACK_EXTERNAL_MODULE_44__, __WEBPACK_EXTERNAL_MODULE_45__, __WEBPACK_EXTERNAL_MODULE_46__, __WEBPACK_EXTERNAL_MODULE_47__, __WEBPACK_EXTERNAL_MODULE_48__, __WEBPACK_EXTERNAL_MODULE_49__, __WEBPACK_EXTERNAL_MODULE_50__, __WEBPACK_EXTERNAL_MODULE_51__, __WEBPACK_EXTERNAL_MODULE_52__, __WEBPACK_EXTERNAL_MODULE_53__, __WEBPACK_EXTERNAL_MODULE_54__, __WEBPACK_EXTERNAL_MODULE_55__) {
+		root["cntd"] = factory(root["react"], root["react-dom"], root["antd/lib/icon"], root["antd/lib/button"], root["damo-core"], root["antd/lib/input"], root["react-dnd"], root["antd/lib/form"], root["antd/lib/menu"], root["antd/lib/message"], root["antd/lib/modal"], root["antd/lib/select"], root["history"], root["hoist-non-react-statics"], root["prop-types"], root["react-router"], root["antd/lib/alert"], root["antd/lib/breadcrumb"], root["antd/lib/card"], root["antd/lib/cascader"], root["antd/lib/checkbox"], root["antd/lib/collapse"], root["antd/lib/date-picker"], root["antd/lib/dropdown"], root["antd/lib/input-number"], root["antd/lib/notification"], root["antd/lib/pagination"], root["antd/lib/radio"], root["antd/lib/switch"], root["antd/lib/table"], root["antd/lib/time-picker"], root["antd/lib/tooltip"], root["async-validator"], root["clipboard"], root["cuid"], root["react-dnd-html5-backend"], root["seamless-immutable"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_8__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_18__, __WEBPACK_EXTERNAL_MODULE_19__, __WEBPACK_EXTERNAL_MODULE_20__, __WEBPACK_EXTERNAL_MODULE_21__, __WEBPACK_EXTERNAL_MODULE_22__, __WEBPACK_EXTERNAL_MODULE_23__, __WEBPACK_EXTERNAL_MODULE_45__, __WEBPACK_EXTERNAL_MODULE_46__, __WEBPACK_EXTERNAL_MODULE_47__, __WEBPACK_EXTERNAL_MODULE_48__, __WEBPACK_EXTERNAL_MODULE_49__, __WEBPACK_EXTERNAL_MODULE_50__, __WEBPACK_EXTERNAL_MODULE_51__, __WEBPACK_EXTERNAL_MODULE_52__, __WEBPACK_EXTERNAL_MODULE_53__, __WEBPACK_EXTERNAL_MODULE_54__, __WEBPACK_EXTERNAL_MODULE_55__, __WEBPACK_EXTERNAL_MODULE_56__, __WEBPACK_EXTERNAL_MODULE_57__, __WEBPACK_EXTERNAL_MODULE_58__, __WEBPACK_EXTERNAL_MODULE_59__, __WEBPACK_EXTERNAL_MODULE_60__, __WEBPACK_EXTERNAL_MODULE_61__, __WEBPACK_EXTERNAL_MODULE_62__, __WEBPACK_EXTERNAL_MODULE_63__, __WEBPACK_EXTERNAL_MODULE_64__, __WEBPACK_EXTERNAL_MODULE_65__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -83,9 +83,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	__webpack_require__(38);
+	__webpack_require__(44);
 
-	var context = __webpack_require__(17);
+	var context = __webpack_require__(24);
 
 	var exportObj = {};
 	context.keys().forEach(function (key) {
@@ -115,12 +115,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 4 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
-
-/***/ },
-/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -142,15 +136,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _message = __webpack_require__(13);
+	var _message = __webpack_require__(17);
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _notification = __webpack_require__(45);
+	var _notification = __webpack_require__(54);
 
 	var _notification2 = _interopRequireDefault(_notification);
 
-	var _copyLogger = __webpack_require__(10);
+	var _copyLogger = __webpack_require__(13);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -360,6 +354,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, _temp);
 
 /***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_5__;
+
+/***/ },
 /* 6 */
 /***/ function(module, exports) {
 
@@ -367,92 +367,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 7 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.DragItem = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _dec, _class, _class2, _temp;
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(2);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _reactDnd = __webpack_require__(7);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var DragItem = exports.DragItem = (_dec = (0, _reactDnd.DragSource)(function (props) {
-	  return props.type;
-	}, {
-	  beginDrag: function beginDrag(props) {
-	    props.doAction(props.type, props.data);
-	    return { data: props.data };
-	  },
-	  endDrag: function endDrag(props, monitor) {
-	    props.doAction(props.type, null, monitor.didDrop());
-	  }
-	}, function (connect, monitor) {
-	  return {
-	    connectDragSource: connect.dragSource(),
-	    isDragging: monitor.isDragging()
-	  };
-	}), _dec(_class = (_temp = _class2 = function (_Component) {
-	  _inherits(DragItem, _Component);
-
-	  function DragItem() {
-	    _classCallCheck(this, DragItem);
-
-	    return _possibleConstructorReturn(this, (DragItem.__proto__ || Object.getPrototypeOf(DragItem)).apply(this, arguments));
-	  }
-
-	  _createClass(DragItem, [{
-	    key: 'render',
-	    value: function render() {
-	      var className = this.props.isDragging ? 'j-kit-drag' : '';
-	      return this.props.connectDragSource(_react2.default.createElement(
-	        'div',
-	        { className: className },
-	        this.props.children
-	      ));
-	    }
-	  }]);
-
-	  return DragItem;
-	}(_react.Component), _class2.propTypes = {
-	  type: _react.PropTypes.string.isRequired,
-	  data: _react.PropTypes.object.isRequired,
-	  doAction: _react.PropTypes.func.isRequired
-	}, _class2.defaultProps = {
-	  doAction: function doAction(noop) {
-	    return noop;
-	  }
-	}, _temp)) || _class);
-
-/***/ },
-/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -474,15 +388,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _menu = __webpack_require__(12);
+	var _menu = __webpack_require__(16);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
-	var _button = __webpack_require__(6);
+	var _button = __webpack_require__(5);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _dropdown = __webpack_require__(42);
+	var _dropdown = __webpack_require__(52);
 
 	var _dropdown2 = _interopRequireDefault(_dropdown);
 
@@ -646,7 +560,256 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, _temp2);
 
 /***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_8__;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_9__;
+
+/***/ },
 /* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _tableColumn = __webpack_require__(11);
+
+	var _tableColumn2 = _interopRequireDefault(_tableColumn);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var schemaFormatters = {
+	  tableColumn: _tableColumn2.default
+	};
+	exports.default = schemaFormatters;
+	module.exports = exports['default'];
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = tableColumnFormatter;
+
+	var _modal = __webpack_require__(18);
+
+	var _modal2 = _interopRequireDefault(_modal);
+
+	var _navLink = __webpack_require__(7);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function tableColumnFormatter(value, schema) {
+	  var _this = this;
+
+	  var columns = [];
+	  for (var name in schema.properties) {
+	    var item = schema.properties[name];
+	    item.key = item.dataIndex = name;
+	    item.title = item.title || name;
+	    if (!item.disabled) {
+	      // 操作
+	      if (item.actions) {
+	        (function () {
+	          var menus = [];
+	          var links = [];
+	          if (Array.isArray(item.actions)) {
+	            item.actions.forEach(function (action) {
+	              var navItem = void 0;
+	              var actionCallback = void 0;
+	              var name = void 0;
+	              var key = void 0;
+	              if (Object(action) === action) {
+	                if (typeof action.action === 'function') {
+	                  name = action.title || action.name;
+	                  key = action.name || action.title;
+	                  actionCallback = action.action;
+	                } else {
+	                  name = action.title || action.name || action.action;
+	                  key = action.name || action.action || action.title;
+
+	                  if (action.modal) {
+	                    var modal = Object(action.modal) === action.modal ? action.modal : {
+	                      title: action.title || '操作提示',
+	                      content: '请确认是否继续操作？'
+	                    };
+	                    actionCallback = function actionCallback(e, record, cancelCallback) {
+	                      var modalInst = _modal2.default.confirm(Object.assign(modal, {
+	                        maskCloasable: false,
+	                        onOk: function onOk() {
+	                          var actionCallback = _this.getAction(action.action);
+	                          return actionCallback && actionCallback(record);
+	                        },
+	                        onCancel: cancelCallback
+	                      }));
+
+	                      return modalInst;
+	                    };
+	                  } else {
+	                    actionCallback = _this.getAction(action.action);
+	                  }
+	                }
+	                navItem = {
+	                  key: key,
+	                  name: name,
+	                  action: actionCallback,
+	                  disabled: action.disabled || false
+	                };
+	                Object.assign(navItem, action.getProps && action.getProps(record));
+	                if (action.isMenu) {
+	                  menus.push(navItem);
+	                } else {
+	                  links.push(navItem);
+	                }
+	              } else {
+	                if (typeof action === 'function') {
+	                  actionCallback = action;
+	                  name = new Date().getTime();
+	                } else {
+	                  name = action;
+	                  actionCallback = _this.getAction(action);
+	                }
+	                navItem = {
+	                  key: name,
+	                  name: name,
+	                  disabled: false,
+	                  action: actionCallback
+	                };
+	                links.push(navItem);
+	              }
+	            });
+	          }
+	          item.render = function (text, record) {
+	            return React.createElement(_navLink.NavLink, { menus: menus, links: links });
+	          };
+	        })();
+	      } else {
+	        if (item.ellipsis) {
+	          item.className = "td-ellipsis";
+	          if (item.render) {
+	            (function () {
+	              var render = item.render;
+	              item.render = function (text, record) {
+	                return React.createElement(
+	                  'div',
+	                  { className: 'text-ellipsis', title: text },
+	                  render(text, record)
+	                );
+	              };
+	            })();
+	          } else {
+	            item.render = function (text) {
+	              return React.createElement(
+	                'div',
+	                { className: 'text-ellipsis', title: text },
+	                text
+	              );
+	            };
+	          }
+	        }
+	      }
+	      columns.push(item);
+	    }
+	  }
+	  return columns;
+	}
+	module.exports = exports['default'];
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.DragItem = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _dec, _class, _class2, _temp;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactDnd = __webpack_require__(9);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var DragItem = exports.DragItem = (_dec = (0, _reactDnd.DragSource)(function (props) {
+	  return props.type;
+	}, {
+	  beginDrag: function beginDrag(props) {
+	    props.doAction(props.type, props.data);
+	    return { data: props.data };
+	  },
+	  endDrag: function endDrag(props, monitor) {
+	    props.doAction(props.type, null, monitor.didDrop());
+	  }
+	}, function (connect, monitor) {
+	  return {
+	    connectDragSource: connect.dragSource(),
+	    isDragging: monitor.isDragging()
+	  };
+	}), _dec(_class = (_temp = _class2 = function (_Component) {
+	  _inherits(DragItem, _Component);
+
+	  function DragItem() {
+	    _classCallCheck(this, DragItem);
+
+	    return _possibleConstructorReturn(this, (DragItem.__proto__ || Object.getPrototypeOf(DragItem)).apply(this, arguments));
+	  }
+
+	  _createClass(DragItem, [{
+	    key: 'render',
+	    value: function render() {
+	      var className = this.props.isDragging ? 'j-kit-drag' : '';
+	      return this.props.connectDragSource(_react2.default.createElement(
+	        'div',
+	        { className: className },
+	        this.props.children
+	      ));
+	    }
+	  }]);
+
+	  return DragItem;
+	}(_react.Component), _class2.propTypes = {
+	  type: _react.PropTypes.string.isRequired,
+	  data: _react.PropTypes.object.isRequired,
+	  doAction: _react.PropTypes.func.isRequired
+	}, _class2.defaultProps = {
+	  doAction: function doAction(noop) {
+	    return noop;
+	  }
+	}, _temp)) || _class);
+
+/***/ },
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -666,15 +829,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _clipboard = __webpack_require__(51);
+	var _clipboard = __webpack_require__(62);
 
 	var _clipboard2 = _interopRequireDefault(_clipboard);
 
-	var _message = __webpack_require__(13);
+	var _message = __webpack_require__(17);
 
 	var _message2 = _interopRequireDefault(_message);
 
-	var _button = __webpack_require__(6);
+	var _button = __webpack_require__(5);
 
 	var _button2 = _interopRequireDefault(_button);
 
@@ -752,28 +915,281 @@ return /******/ (function(modules) { // webpackBootstrap
 	}(_react.Component);
 
 /***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_11__;
-
-/***/ },
-/* 12 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_12__;
-
-/***/ },
-/* 13 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_13__;
-
-/***/ },
 /* 14 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_14__;
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Validator = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _class, _temp; /**
+	                    * # 通用校验模块
+	                    * 1. 通过定义校验规则用于校验数据合法
+	                    * 2. 集成antd-form，校验表单合法
+	                    */
+
+
+	var _asyncValidator = __webpack_require__(61);
+
+	var _asyncValidator2 = _interopRequireDefault(_asyncValidator);
+
+	var _damoCore = __webpack_require__(6);
+
+	var _hoistNonReactStatics = __webpack_require__(21);
+
+	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
+
+	var _form = __webpack_require__(15);
+
+	var _form2 = _interopRequireDefault(_form);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var noop = function noop() {};
+
+	/**
+	 * + async-validator@1.6.6
+	 * > see: https://github.com/yiminghe/async-validator
+	 */
+	var Validator = exports.Validator = (_temp = _class = function () {
+	  function Validator(props, validateRules) {
+	    _classCallCheck(this, Validator);
+
+	    for (var key in validateRules) {
+	      validateRules[key] = this.pack(validateRules[key]);
+	    }
+	    this.$validateRules_ = validateRules || {};
+	    this.$handleSubmit_ = function (errors, values) {
+	      if (errors) {
+	        return false;
+	      } else {
+	        return values;
+	      }
+	    };
+	  }
+	  /**
+	   * + 校验规则
+	   * ```
+	   * fieldRules = [{
+	   *  [fieldName]: {
+	   *    type: ['string', 'number', 'boolean', 'method', 'regexp', 'integer', 'float', 'array', 'object', 'enum', 'date', 'url', 'hex', 'email'],
+	   *    required,
+	   *    pattern,
+	   *    whitespace,
+	   *    transform,
+	   *    message,
+	   *    validator,
+	   *    [range(min, max): 'string' | 'array' | 'integer'],
+	   *    [length: 'string' | 'array']
+	   *    [enum: 'enum'],
+	   *    [fields: 'deep rules'],
+	   *    [defaultField: 'array' | 'object']
+	   *  }
+	   * },...]
+	   * ```
+	   */
+
+
+	  _createClass(Validator, [{
+	    key: 'pack',
+	    value: function pack(rule) {
+	      if (Array.isArray(rule)) {
+	        rule = rule.map(function (item) {
+	          if (typeof item.pattern === 'string') {
+	            item.pattern = Validator.templates.pattern[item.pattern];
+	          }
+	          return item;
+	        });
+	      } else {
+	        if (typeof rule.pattern === 'string') {
+	          rule.pattern = Validator.templates.pattern[rule.pattern];
+	        }
+	      }
+	      return rule;
+	    }
+	  }, {
+	    key: 'setForm',
+	    value: function setForm(form, validateRules, submitCallback) {
+	      this.$form_ = form;
+	      if (submitCallback) {
+	        this.$handleSubmit_ = submitCallback;
+	        if (validateRules) {
+	          for (var key in validateRules) {
+	            validateRules[key] = this.pack(validateRules[key]);
+	          }
+	          this.$validateRules_ = validateRules;
+	        }
+	      } else if (validateRules) {
+	        this.$handleSubmit_ = validateRules;
+	      }
+	    }
+	  }, {
+	    key: 'submit',
+	    value: function submit(callback) {
+	      var _this = this;
+
+	      return this.validateFieldsAndScroll(function (errors, values) {
+	        values = _this.$handleSubmit_(errors, values);
+	        if (values === false) {
+	          return false;
+	        } else {
+	          return callback(values);
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'reset',
+	    value: function reset() {
+	      this.$form_.resetFields();
+	    }
+	  }, {
+	    key: 'getProps',
+	    value: function getProps(fieldName, rule) {
+	      if (this.$validateRules_[fieldName]) {
+	        return assignDeep(this.$validateRules_[fieldName], rule && this.pack(rule));
+	      } else {
+	        return rule && this.pack(rule);
+	      }
+	    }
+	  }, {
+	    key: 'validate',
+	    value: function validate(source, callback) {
+	      new _asyncValidator2.default(this.$validateRules_).validate(source, function (errors, values) {
+	        if (Validator.errorHandler(errors, values) !== false) {
+	          callback && callback(errors, values);
+	        }
+	      });
+	    }
+
+	    // #! for antd-form
+
+	  }, {
+	    key: 'getFieldProps',
+	    value: function getFieldProps(fieldName, option) {
+	      if (!option.rules && option.rule) {
+	        option.rules = [option.rule];
+	      }
+	      if (this.$validateRules_[fieldName]) {
+	        // option.rules = assignDeep([].concat(this.$validateRules_[fieldName]),
+	        // option.rules && this.pack(option.rules) || []);
+	        option.rules = [].concat(this.$validateRules_[fieldName], option.rules && this.pack(option.rules) || []);
+	      } else if (option.rules) {
+	        option.rules = this.pack(option.rules);
+	      }
+	      return this.$form_.getFieldProps(fieldName, option);
+	    }
+	  }, {
+	    key: 'getFieldDecorator',
+	    value: function getFieldDecorator(fieldName, option) {
+	      if (!option.rules && option.rule) {
+	        option.rules = [option.rule];
+	      }
+	      if (this.$validateRules_[fieldName]) {
+	        // option.rules = assignDeep([].concat(this.$validateRules_[fieldName]),
+	        // option.rules && this.pack(option.rules) || []);
+	        option.rules = [].concat(this.$validateRules_[fieldName], option.rules && this.pack(option.rules) || []);
+	      } else if (option.rules) {
+	        option.rules = this.pack(option.rules);
+	      }
+	      return this.$form_.getFieldDecorator(fieldName, option);
+	    }
+	  }, {
+	    key: 'validateFields',
+	    value: function validateFields() {
+	      var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : noop;
+
+	      var defer = new _damoCore.Deferred();
+	      this.$form_.validateFields(function (errors, values) {
+	        if (Validator.errorHandler(errors, values) !== false) {
+	          var result = callback(errors, values);
+	          if (result && result.then) {
+	            result.then(defer.resolve, defer.reject);
+	          } else if (result === false) {
+	            defer.reject(false);
+	          } else {
+	            defer.resolve(result);
+	          }
+	        }
+	      });
+	      return defer.promise;
+	    }
+	  }, {
+	    key: 'validateFieldsAndScroll',
+	    value: function validateFieldsAndScroll() {
+	      var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : noop;
+
+	      var defer = new _damoCore.Deferred();
+	      this.$form_.validateFieldsAndScroll(function (errors, values) {
+	        if (Validator.errorHandler(errors, values) !== false) {
+	          var result = callback(errors, values);
+	          if (result && result.then) {
+	            result.then(defer.resolve, defer.reject);
+	          } else if (result === false) {
+	            defer.reject(false);
+	          } else {
+	            defer.resolve(result);
+	          }
+	        }
+	      });
+	      return defer.promise;
+	    }
+	  }]);
+
+	  return Validator;
+	}(), _class.enhanceForm = function (option) {
+	  return function (BaseComponent) {
+	    var Component = _form2.default.create(Object.assign(option || {}, { wrappedComponentRef: true }))(BaseComponent);
+	    Component.prototype.getRealInstance = function () {
+	      return this.refs.wrappedComponent.refs.formWrappedComponent;
+	    };
+	    return (0, _hoistNonReactStatics2.default)(Component, BaseComponent);
+	  };
+	}, _class.validate = function (rules, source, callback) {
+	  var descriptor = {};
+	  for (var key in rules) {
+	    if (typeof rules[key] === 'boolean') {
+	      descriptor[key] = {
+	        type: 'string',
+	        required: rules[key]
+	      };
+	    } else {
+	      descriptor[key] = rules[key];
+	    }
+	    fields[key] = source[key];
+	  }
+	  var validator = new _asyncValidator2.default(descriptor);
+	  validator.validate(source, callback);
+	}, _class.errorHandler = function () {}, _class.templates = {
+	  pattern: {
+	    // #! 中英字母数字下划线
+	    legal: /^[A-Za-z0-9_\u4e00-\u9fa5]*$/,
+	    // #! 必须是字母数字、下划线、中划线以及
+	    light_legal: /^[A-Za-z0-9\._\-]*$/,
+	    // #! 以字母开头，不能包含中文或特殊字符
+	    light_light_legal: /^[a-zA-Z]\w*$/,
+	    // #! 中英字母数字下划线
+	    dark_legal: /^[A-Za-z0-9\_\u4e00-\u9fa5]*$/,
+	    // #! 必须是中英字母数字下划线以及.
+	    dark_dark_legal: /^[A-Za-z0-9\._\u4e00-\u9fa5]*$/
+	  } }, _class.$inject = ['props', 'validateRules'], _temp);
+
+
+	function assignDeep(obj, newObj) {
+	  if (Array.isArray(obj)) {
+	    return obj.map(function (item, index) {
+	      return assignDeep(item, newObj[index]);
+	    });
+	  } else {
+	    return Object.assign(obj, newObj);
+	  }
+	}
 
 /***/ },
 /* 15 */
@@ -789,30 +1205,74 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 17 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_17__;
+
+/***/ },
+/* 18 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_18__;
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_19__;
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_20__;
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_21__;
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_22__;
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_23__;
+
+/***/ },
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./components/dataset/formatter/index.js": 18,
-		"./components/dataset/index.jsx": 19,
-		"./components/dataset/schemaParser.js": 20,
-		"./components/dnd/dragItem.jsx": 8,
-		"./components/dnd/dropItem.jsx": 21,
-		"./components/dnd/index.jsx": 22,
-		"./components/modal/index.jsx": 23,
-		"./components/navLink/index.jsx": 9,
-		"./components/notifier/copyLogger.jsx": 10,
-		"./components/notifier/errorFetch.js": 24,
-		"./components/notifier/errorReducer.js": 25,
-		"./components/notifier/notifier.js": 5,
-		"./components/sceneComponent/index.jsx": 26,
-		"./components/sceneComponent/selector.js": 27,
-		"./components/search/index.jsx": 28,
-		"./components/sidebar/index.jsx": 29,
-		"./components/tagSearcher/index.jsx": 30,
-		"./services/adaptPage.js": 31,
-		"./services/baseColumn.js": 32,
-		"./services/breadCrumb.js": 33,
-		"./services/validator.js": 34
+		"./components/customForm/index.jsx": 25,
+		"./components/dataset/formatter/index.js": 10,
+		"./components/dataset/formatter/tableColumn.js": 11,
+		"./components/dataset/index.jsx": 26,
+		"./components/dataset/schemaParser.js": 27,
+		"./components/dnd/dragItem.jsx": 12,
+		"./components/dnd/dropItem.jsx": 28,
+		"./components/dnd/index.jsx": 29,
+		"./components/modal/index.jsx": 30,
+		"./components/navLink/index.jsx": 7,
+		"./components/notifier/copyLogger.jsx": 13,
+		"./components/notifier/errorFetch.js": 31,
+		"./components/notifier/errorReducer.js": 32,
+		"./components/notifier/notifier.js": 4,
+		"./components/sceneComponent/index.jsx": 33,
+		"./components/sceneComponent/selector.js": 34,
+		"./components/search/index.jsx": 35,
+		"./components/sidebar/index.jsx": 36,
+		"./components/tagSearcher/index.jsx": 37,
+		"./services/adaptPage.js": 38,
+		"./services/baseColumn.js": 39,
+		"./services/breadCrumb.js": 40,
+		"./services/validator.js": 14
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -825,22 +1285,394 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 17;
+	webpackContext.id = 24;
 
 
 /***/ },
-/* 18 */
-/***/ function(module, exports) {
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var schemaFormatters = exports.schemaFormatters = {};
+	exports.CustomForm = undefined;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _dec, _class, _class2, _temp;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(2);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _propTypes = __webpack_require__(22);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	var _form = __webpack_require__(15);
+
+	var _form2 = _interopRequireDefault(_form);
+
+	var _input = __webpack_require__(8);
+
+	var _input2 = _interopRequireDefault(_input);
+
+	var _inputNumber = __webpack_require__(53);
+
+	var _inputNumber2 = _interopRequireDefault(_inputNumber);
+
+	var _select = __webpack_require__(19);
+
+	var _select2 = _interopRequireDefault(_select);
+
+	var _datePicker = __webpack_require__(51);
+
+	var _datePicker2 = _interopRequireDefault(_datePicker);
+
+	var _timePicker = __webpack_require__(59);
+
+	var _timePicker2 = _interopRequireDefault(_timePicker);
+
+	var _radio = __webpack_require__(56);
+
+	var _radio2 = _interopRequireDefault(_radio);
+
+	var _checkbox = __webpack_require__(49);
+
+	var _checkbox2 = _interopRequireDefault(_checkbox);
+
+	var _switch = __webpack_require__(57);
+
+	var _switch2 = _interopRequireDefault(_switch);
+
+	var _cascader = __webpack_require__(48);
+
+	var _cascader2 = _interopRequireDefault(_cascader);
+
+	var _card = __webpack_require__(47);
+
+	var _card2 = _interopRequireDefault(_card);
+
+	var _button = __webpack_require__(5);
+
+	var _button2 = _interopRequireDefault(_button);
+
+	var _icon = __webpack_require__(3);
+
+	var _icon2 = _interopRequireDefault(_icon);
+
+	var _validator = __webpack_require__(14);
+
+	var _notifier = __webpack_require__(4);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CustomForm = exports.CustomForm = (_dec = _validator.Validator.enhanceForm(), _dec(_class = (_temp = _class2 = function (_Component) {
+	  _inherits(CustomForm, _Component);
+
+	  function CustomForm(props) {
+	    _classCallCheck(this, CustomForm);
+
+	    var _this = _possibleConstructorReturn(this, (CustomForm.__proto__ || Object.getPrototypeOf(CustomForm)).call(this, props));
+
+	    _this.state = {};
+
+	    _this.$validator_ = new _validator.Validator();
+	    _this.$validator_.setForm(props.form, props.validateRules, function (errors, values) {
+	      if (errors) {
+	        new _notifier.Notifier({
+	          level: 'one',
+	          type: 'error',
+	          content: '表单校验失败'
+	        }, true);
+	        return false;
+	      } else {
+	        return values;
+	      }
+	    });
+	    return _this;
+	  }
+
+	  _createClass(CustomForm, [{
+	    key: 'handleSubmit',
+	    value: function handleSubmit() {
+	      var _this2 = this;
+
+	      return this.$validator_.submit(function (body) {
+	        body = _this2.props.beforeSave ? _this2.props.beforeSave(body) : body;
+
+	        if (body === false) {
+	          return;
+	        }
+
+	        _this2.props.submit(body, _this2.props.dataSource);
+	      });
+	    }
+	  }, {
+	    key: 'renderInput',
+	    value: function renderInput(option, key) {
+	      var _this3 = this;
+
+	      if (!option.name) return null;
+	      if (option.children) {
+	        var renderInput = this.renderInput.bind(this);
+	        return _react2.default.createElement(
+	          _card2.default,
+	          {
+	            key: key,
+	            style: {
+	              padding: '15px 15px 7px'
+	            },
+	            title: option.title || option.name },
+	          option.children.map(renderInput)
+	        );
+	      }
+	      var propsByState = option.getProps ? option.getProps(this.props.dataSource, this.state, function (nextState) {
+	        return _this3.setState(nextState);
+	      }) : {};
+	      var defaultProps = {
+	        disabled: option.disabled,
+	        placeholder: option.placeholder
+	      };
+	      var decoratorProps = {
+	        initialValue: this.props.dataSource[option.name]
+	      };
+	      var input = void 0;
+	      if (option.component) {
+	        if (option.component.prototype.isReactComponent) {
+	          input = _react2.default.createElement(option.component, _extends({}, defaultProps, propsByState));
+	        } else {
+	          input = option.component;
+	        }
+	      } else {
+	        switch (option.type) {
+	          case 'number':
+	          case 'integer':
+	            var maxLength = option.maxLength ? option.maxLength : 10;
+	            maxLength = +new Array(maxLength).join(9);
+	            if (option.maximum) {
+	              maxLength = Number(maxLength + '0.' + option.maximum);
+	            }
+
+	            input = _react2.default.createElement(_inputNumber2.default, _extends({
+	              style: { width: 250 },
+	              min: option.minLength ? option.minLength : 0,
+	              max: maxLength
+	            }, defaultProps, propsByState));
+	            break;
+	          case 'boolean':
+	            var ps = [].concat(option.placeholder || []);
+	            input = _react2.default.createElement(_switch2.default, _extends({
+	              disabled: option.disabled,
+	              unCheckedChildren: ps[0],
+	              checkedChildren: ps[1]
+	            }, propsByState));
+	            break;
+	          case 'string':
+	            switch (option.format) {
+	              case 'DATE_TIME':
+	                input = _react2.default.createElement(_datePicker2.default, _extends({
+	                  showTime: true,
+	                  format: 'YYYY-MM-DD HH:mm:ss'
+	                }, defaultProps, propsByState));
+	                break;
+	              case 'DATE':
+	                input = _react2.default.createElement(_datePicker2.default, _extends({}, defaultProps, propsByState));
+	                break;
+	              case 'TIME':
+	                input = _react2.default.createElement(_timePicker2.default, _extends({}, defaultProps, propsByState));
+	                break;
+	              case 'DATE_RANGE':
+	                input = _react2.default.createElement(_datePicker2.default.RangePicker, _extends({}, defaultProps, propsByState));
+	                break;
+	              case 'CDN_PIC':
+	                Object.assign(decoratorProps, {
+	                  valuePropName: 'fileList',
+	                  getValueFromEvent: function getValueFromEvent(e) {
+	                    if (Array.isArray(e)) {
+	                      return e;
+	                    }
+	                    return e && e.fileList;
+	                  }
+	                });
+	                if (option.dragger) {
+	                  input = _react2.default.createElement(
+	                    Upload.Dragger,
+	                    _extends({}, defaultProps, propsByState, {
+	                      listType: 'picture',
+	                      action: option.action }),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'ant-upload-drag-icon' },
+	                      _react2.default.createElement(_icon2.default, { type: 'inbox' })
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'ant-upload-text' },
+	                      '\u70B9\u51FB\u6216\u8005\u6258\u8F6C\u6587\u4EF6\u5230\u4E0A\u4F20\u533A\u57DF'
+	                    )
+	                  );
+	                } else {
+	                  input = _react2.default.createElement(
+	                    Upload,
+	                    _extends({}, defaultProps, propsByState, {
+	                      action: option.action,
+	                      listType: 'picture' }),
+	                    _react2.default.createElement(
+	                      _button2.default,
+	                      null,
+	                      _react2.default.createElement(_icon2.default, { type: 'upload' }),
+	                      '\u4E0A\u4F20\u56FE\u7247'
+	                    )
+	                  );
+	                }
+	                break;
+	              case 'FILE':
+	                Object.assign(decoratorProps, {
+	                  valuePropName: 'fileList',
+	                  getValueFromEvent: function getValueFromEvent(e) {
+	                    if (Array.isArray(e)) {
+	                      return e;
+	                    }
+	                    return e && e.fileList;
+	                  }
+	                });
+
+	                if (option.dragger) {
+	                  input = _react2.default.createElement(
+	                    Upload.Dragger,
+	                    _extends({}, defaultProps, propsByState, {
+	                      listType: 'text',
+	                      action: option.action }),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'ant-upload-drag-icon' },
+	                      _react2.default.createElement(_icon2.default, { type: 'inbox' })
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'ant-upload-text' },
+	                      '\u70B9\u51FB\u6216\u8005\u6258\u8F6C\u6587\u4EF6\u5230\u4E0A\u4F20\u533A\u57DF'
+	                    )
+	                  );
+	                } else {
+	                  input = _react2.default.createElement(
+	                    Upload,
+	                    _extends({}, defaultProps, propsByState, {
+	                      action: option.action,
+	                      listType: 'text' }),
+	                    _react2.default.createElement(
+	                      _button2.default,
+	                      null,
+	                      _react2.default.createElement(_icon2.default, { type: 'upload' }),
+	                      '\u4E0A\u4F20\u6587\u4EF6'
+	                    )
+	                  );
+	                }
+	                break;
+	              case 'SELECT':
+	                input = _react2.default.createElement(
+	                  _select2.default,
+	                  _extends({ mode: option.mode }, defaultProps, propsByState),
+	                  option.options.map(function (item) {
+	                    return _react2.default.createElement(
+	                      _select2.default.Option,
+	                      {
+	                        key: item.value || item.id,
+	                        value: item.value || item.id,
+	                        disabled: item.disabled },
+	                      item.name || item.text
+	                    );
+	                  })
+	                );
+	                break;
+	              case 'TEXT':
+	                input = _react2.default.createElement(_input2.default, _extends({
+	                  type: 'textarea',
+	                  autosize: {
+	                    minRows: 4,
+	                    maxRows: 10
+	                  }
+	                }, defaultProps, propsByState));
+	                break;
+	              default:
+	                input = _react2.default.createElement(_input2.default, _extends({}, defaultProps, propsByState));
+	                break;
+	            }
+	            break;
+	        }
+	      }
+	      var formItemProps = Object.assign({
+	        label: option.title || option.name,
+	        required: option.required,
+	        hasFeedback: option.hasFeedback
+	      }, this.props.formLayout);
+	      return _react2.default.createElement(
+	        _form2.default.Item,
+	        _extends({ key: key }, formItemProps),
+	        this.$validator_.getFieldDecorator(option.name, decoratorProps)(input)
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this4 = this;
+
+	      var dataSource = this.props.dataSource;
+	      var renderInput = this.renderInput.bind(this);
+	      return _react2.default.createElement(
+	        _form2.default,
+	        {
+	          layout: this.props.layout,
+	          onSubmit: function onSubmit(e) {
+	            e.preventDefault();
+	            _this4.handleSubmit();
+	          } },
+	        this.props.options.map(renderInput)
+	      );
+	    }
+	  }]);
+
+	  return CustomForm;
+	}(_react.Component), _class2.proptTypes = {
+	  dataSource: _propTypes2.default.object,
+	  options: _propTypes2.default.array.isRequired,
+	  formLayout: _propTypes2.default.object,
+	  validateRules: _propTypes2.default.array,
+	  beforeSave: _propTypes2.default.func,
+	  submit: _propTypes2.default.func,
+	  layout: _propTypes2.default.string
+	}, _class2.defaultProps = {
+	  layout: 'horizontal',
+	  dataSource: {},
+	  formLayout: {
+	    labelCol: {
+	      span: 3
+	    },
+	    wrapperCol: {
+	      span: 20
+	    },
+	    hasFeedback: true,
+	    required: true
+	  }
+	}, _temp)) || _class);
 
 /***/ },
-/* 19 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -864,7 +1696,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _damoCore = __webpack_require__(4);
+	var _damoCore = __webpack_require__(6);
+
+	var _formatter = __webpack_require__(10);
+
+	var _formatter2 = _interopRequireDefault(_formatter);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -887,6 +1723,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _this.state = {};
 	    _this.stateUpdater = {};
 
+	    _this.setActions();
+
 	    /**
 	     * prop = {
 	     *  value: Object | Function,
@@ -897,7 +1735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    Object.keys(props.attrs).forEach(function (name) {
 	      var prop = props.attrs[name];
-	      var originValue = typeof prop.value === 'function' ? props.attrs[name].value.call(_this, _this.props) : prop.value;
+	      var originValue = typeof prop.value === 'function' ? prop.value.call(_this, _this.props) : prop.value;
 	      var formatter = prop.formatter || prop.format && DataSet.formatters[prop.format];
 	      // formatter是一系列解决组件schema的格式化函数
 	      if (formatter) {
@@ -922,20 +1760,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      };
 	    });
 	    return _this;
-	  }
+	  } //{};
 
 	  _createClass(DataSet, [{
 	    key: 'getModel',
-	    value: function getModel(modelName) {
-	      if (Object(modelName) === modelName) {
-	        modelName = modelName.displayName;
-	      }
-	      return _damoCore.BaseSelector.appStore.models[modelName];
-	    }
-	  }, {
-	    key: 'isState',
-	    value: function isState(obj) {
-	      return Object(obj) === obj;
+	    value: function getModel() {
+	      this.$dataModel_;
 	    }
 	    /**
 	     * action = {
@@ -952,8 +1782,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'getChildContext',
-	    value: function getChildContext() {
+	    key: 'setActions',
+	    value: function setActions() {
 	      var _this2 = this;
 
 	      if (this.$dataModel_) {
@@ -974,10 +1804,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	              if (err) {
 	                error && error(err);
 	              } else if (success) {
-	                var result = success(res);
-	                if (_this2.isState(result)) {
-	                  _this2.setState(result);
-	                }
+	                var result = success(res, function (state) {
+	                  _this2.setState(state);
+	                });
 	              }
 	              callback && callback(err, res);
 	            };
@@ -1008,7 +1837,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	        Object.assign(this.$dataModel_, requestObj);
 	      }
-	      return { dataModel: this.$dataModel_ };
+	    }
+	  }, {
+	    key: 'getAction',
+	    value: function getAction(action) {
+	      return this.$dataModel_[action] && this.$dataModel_[action].bind(this.$dataModel_);
 	    }
 	  }, {
 	    key: 'getRealInstance',
@@ -1072,7 +1905,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return DataSet;
-	}(_react.Component), _class.formatters = {}, _class.themeOptions = {}, _class.theme = function (themeOptions) {
+	}(_react.Component), _class.formatters = _formatter2.default, _class.themeOptions = {}, _class.theme = function (themeOptions) {
 	  DataSet.themeOptions = themeOptions;
 	}, _class.getNotifier = function () {}, _class.getFallback = function () {}, _class.getActionName = function (name) {
 	  return name;
@@ -1086,7 +1919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, _temp);
 
 /***/ },
-/* 20 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1103,7 +1936,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _propTypes = __webpack_require__(53);
+	var _propTypes = __webpack_require__(22);
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -1198,11 +2031,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    prop = propTypesMap[component.propTypes[_key3].type];
 	    if (defaultProps[_key3] === undefined) {
 	      item = {
-	        title: _key3
+	        title: _key3,
+	        name: _key3
 	      };
 	    } else {
 	      item = {
 	        title: _key3,
+	        name: _key3,
 	        default: defaultProps[_key3]
 	      };
 	    }
@@ -1240,7 +2075,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 21 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1262,7 +2097,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactDnd = __webpack_require__(7);
+	var _reactDnd = __webpack_require__(9);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1319,7 +2154,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, _temp)) || _class);
 
 /***/ },
-/* 22 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1329,15 +2164,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.DnDContext = undefined;
 
-	var _hoistNonReactStatics = __webpack_require__(15);
+	var _hoistNonReactStatics = __webpack_require__(21);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _reactDndHtml5Backend = __webpack_require__(54);
+	var _reactDndHtml5Backend = __webpack_require__(64);
 
 	var _reactDndHtml5Backend2 = _interopRequireDefault(_reactDndHtml5Backend);
 
-	var _reactDnd = __webpack_require__(7);
+	var _reactDnd = __webpack_require__(9);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1349,7 +2184,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 23 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1371,11 +2206,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _modal = __webpack_require__(44);
+	var _modal = __webpack_require__(18);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
-	var _cuid = __webpack_require__(52);
+	var _cuid = __webpack_require__(63);
 
 	var _cuid2 = _interopRequireDefault(_cuid);
 
@@ -1521,7 +2356,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	AppModal.enhance(_modal2.default);
 
 /***/ },
-/* 24 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1531,7 +2366,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.errorFetch = errorFetch;
 
-	var _notifier = __webpack_require__(5);
+	var _notifier = __webpack_require__(4);
 
 	function errorFetch(res, errorNotification) {
 	  var checkStatus = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
@@ -1552,7 +2387,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 25 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1562,7 +2397,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.errorReducer = errorReducer;
 
-	var _notifier = __webpack_require__(5);
+	var _notifier = __webpack_require__(4);
 
 	function errorReducer() {
 	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
@@ -1603,7 +2438,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   */
 
 /***/ },
-/* 26 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1627,15 +2462,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _table = __webpack_require__(48);
+	var _table = __webpack_require__(58);
 
 	var _table2 = _interopRequireDefault(_table);
 
-	var _button = __webpack_require__(6);
+	var _button = __webpack_require__(5);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _breadcrumb = __webpack_require__(40);
+	var _breadcrumb = __webpack_require__(46);
 
 	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
 
@@ -1643,11 +2478,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _input = __webpack_require__(11);
+	var _input = __webpack_require__(8);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _navLink = __webpack_require__(9);
+	var _navLink = __webpack_require__(7);
 
 	var _navLink2 = _interopRequireDefault(_navLink);
 
@@ -1865,7 +2700,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, _temp);
 
 /***/ },
-/* 27 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1879,13 +2714,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _history = __webpack_require__(14);
+	var _history = __webpack_require__(20);
 
-	var _seamlessImmutable = __webpack_require__(55);
+	var _seamlessImmutable = __webpack_require__(65);
 
 	var _seamlessImmutable2 = _interopRequireDefault(_seamlessImmutable);
 
-	var _damoCore = __webpack_require__(4);
+	var _damoCore = __webpack_require__(6);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1988,7 +2823,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}(_damoCore.RxSelector);
 
 /***/ },
-/* 28 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2012,11 +2847,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _select = __webpack_require__(47);
+	var _select = __webpack_require__(19);
 
 	var _select2 = _interopRequireDefault(_select);
 
-	var _pagination = __webpack_require__(46);
+	var _pagination = __webpack_require__(55);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
@@ -2024,7 +2859,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	__webpack_require__(35);
+	__webpack_require__(41);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2439,7 +3274,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, _temp);
 
 /***/ },
-/* 29 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2461,13 +3296,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactRouter = __webpack_require__(16);
+	var _reactRouter = __webpack_require__(23);
 
-	var _menu = __webpack_require__(12);
+	var _menu = __webpack_require__(16);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
-	__webpack_require__(36);
+	__webpack_require__(42);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2605,11 +3440,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            inlineIndent: this.props.inlineIndent,
 	            theme: this.props.theme,
 	            selectedKeys: this.state.selectedKeys,
-	            onOpen: function onOpen(e) {
-	              return _this3.handleOpenMenu();
-	            },
-	            onClose: function onClose(e) {
-	              return _this3.handleCloseMenu();
+	            onOpenChange: function onOpenChange(openKeys) {
+	              _this3.setState({ openKeys: openKeys });
+	              _this3.setLocalItem(LOCAL_MENU_KEY, openKeys);
 	            },
 	            defaultOpenKeys: this.state.openKeys,
 	            className: 'j-kit-elem-left-nav',
@@ -2627,34 +3460,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	      }
 	      this.props.onClick && this.props.onClick(menu, isSubMenu);
-	    }
-	  }, {
-	    key: 'handleOpenMenu',
-	    value: function handleOpenMenu(menu) {
-	      var _this4 = this;
-
-	      var idx = this.state.openKeys.findIndex(function (key) {
-	        return key === menu[_this4.props.itemKey];
-	      });
-	      if (idx === -1) {
-	        var openKeys = this.state.openKeys.concat(menu[this.props.itemKey]);
-	        this.setState({ openKeys: openKeys });
-	        this.setLocalItem(LOCAL_MENU_KEY, openKeys);
-	      }
-	    }
-	  }, {
-	    key: 'handleCloseMenu',
-	    value: function handleCloseMenu(menu) {
-	      var _this5 = this;
-
-	      var idx = this.state.openKeys.findIndex(function (key) {
-	        return key === menu[_this5.props.itemKey];
-	      });
-	      if (idx > -1) {
-	        var openKeys = this.state.openKeys.splice(idx, 1);
-	        this.setState({ openKeys: openKeys });
-	        this.setLocalItem(LOCAL_MENU_KEY, openKeys);
-	      }
 	    }
 	  }, {
 	    key: 'handleStretch',
@@ -2680,7 +3485,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'renderMenuItem',
 	    value: function renderMenuItem(menus) {
-	      var _this6 = this;
+	      var _this4 = this;
 
 	      return menus.map(function (menu, index) {
 	        var children = menu.children || menu.childRoutes;
@@ -2688,7 +3493,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          return _react2.default.createElement(
 	            _menu2.default.SubMenu,
 	            {
-	              key: menu[_this6.props.itemKey],
+	              key: menu[_this4.props.itemKey],
 	              title: _react2.default.createElement(
 	                'span',
 	                null,
@@ -2700,17 +3505,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	                )
 	              ),
 	              onClick: function onClick(e) {
-	                return _this6.handleClick(menu, true);
+	                return _this4.handleClick(menu, true);
 	              },
 	              disabled: menu.disabled },
-	            _this6.renderMenuItem(children)
+	            _this4.renderMenuItem(children)
 	          );
 	        } else if (menu.url || menu.path) {
 	          return _react2.default.createElement(
 	            _menu2.default.Item,
 	            {
-	              className: menu[_this6.props.itemKey.split('/').join('_')] + '-wrap',
-	              key: menu[_this6.props.itemKey],
+	              className: menu[_this4.props.itemKey.split('/').join('_')] + '-wrap',
+	              key: menu[_this4.props.itemKey],
 	              disabled: menu.disabled },
 	            _react2.default.createElement(
 	              _reactRouter.Link,
@@ -2718,7 +3523,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                to: menu.url || menu.path,
 	                target: menu.target || '',
 	                onClick: function onClick(e) {
-	                  return _this6.handleClick(menu);
+	                  return _this4.handleClick(menu);
 	                } },
 	              menu.icon,
 	              _react2.default.createElement(
@@ -2731,7 +3536,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        } else {
 	          return _react2.default.createElement(
 	            _menu2.default.Item,
-	            { key: menu[_this6.props.itemKey], disabled: menu.disabled },
+	            { key: menu[_this4.props.itemKey], disabled: menu.disabled },
 	            _react2.default.createElement(
 	              'span',
 	              null,
@@ -2778,7 +3583,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, _temp);
 
 /***/ },
-/* 30 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2802,15 +3607,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _collapse = __webpack_require__(41);
+	var _collapse = __webpack_require__(50);
 
 	var _collapse2 = _interopRequireDefault(_collapse);
 
-	var _input = __webpack_require__(11);
+	var _input = __webpack_require__(8);
 
 	var _input2 = _interopRequireDefault(_input);
 
-	var _tooltip = __webpack_require__(49);
+	var _tooltip = __webpack_require__(60);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
@@ -2818,13 +3623,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _icon2 = _interopRequireDefault(_icon);
 
-	var _alert = __webpack_require__(39);
+	var _alert = __webpack_require__(45);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _dragItem = __webpack_require__(8);
+	var _dragItem = __webpack_require__(12);
 
-	__webpack_require__(37);
+	__webpack_require__(43);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3206,7 +4011,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}, _temp);
 
 /***/ },
-/* 31 */
+/* 38 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3316,7 +4121,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}();
 
 /***/ },
-/* 32 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3328,7 +4133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _damoCore = __webpack_require__(4);
+	var _damoCore = __webpack_require__(6);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -3375,7 +4180,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}();
 
 /***/ },
-/* 33 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3389,11 +4194,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _history = __webpack_require__(14);
+	var _history = __webpack_require__(20);
 
 	var _react = __webpack_require__(1);
 
-	var _reactRouter = __webpack_require__(16);
+	var _reactRouter = __webpack_require__(23);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -3494,331 +4299,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	}(), _class.Link = BLink, _class.query = {}, _class.$inject = ['router'], _temp);
 
 /***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.Validator = undefined;
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _class, _temp; /**
-	                    * # 通用校验模块
-	                    * 1. 通过定义校验规则用于校验数据合法
-	                    * 2. 集成antd-form，校验表单合法
-	                    */
-
-
-	var _asyncValidator = __webpack_require__(50);
-
-	var _asyncValidator2 = _interopRequireDefault(_asyncValidator);
-
-	var _damoCore = __webpack_require__(4);
-
-	var _hoistNonReactStatics = __webpack_require__(15);
-
-	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
-
-	var _form = __webpack_require__(43);
-
-	var _form2 = _interopRequireDefault(_form);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var noop = function noop() {};
-
-	/**
-	 * + async-validator@1.6.6
-	 * > see: https://github.com/yiminghe/async-validator
-	 */
-	var Validator = exports.Validator = (_temp = _class = function () {
-	  function Validator(props, validateRules) {
-	    _classCallCheck(this, Validator);
-
-	    for (var key in validateRules) {
-	      validateRules[key] = this.pack(validateRules[key]);
-	    }
-	    this.$validateRules_ = validateRules || {};
-	    this.$handleSubmit_ = function (errors, values) {
-	      if (errors) {
-	        return false;
-	      } else {
-	        return values;
-	      }
-	    };
-	  }
-	  /**
-	   * + 校验规则
-	   * ```
-	   * fieldRules = [{
-	   *  [fieldName]: {
-	   *    type: ['string', 'number', 'boolean', 'method', 'regexp', 'integer', 'float', 'array', 'object', 'enum', 'date', 'url', 'hex', 'email'],
-	   *    required,
-	   *    pattern,
-	   *    whitespace,
-	   *    transform,
-	   *    message,
-	   *    validator,
-	   *    [range(min, max): 'string' | 'array' | 'integer'],
-	   *    [length: 'string' | 'array']
-	   *    [enum: 'enum'],
-	   *    [fields: 'deep rules'],
-	   *    [defaultField: 'array' | 'object']
-	   *  }
-	   * },...]
-	   * ```
-	   */
-
-
-	  _createClass(Validator, [{
-	    key: 'pack',
-	    value: function pack(rule) {
-	      if (Array.isArray(rule)) {
-	        rule = rule.map(function (item) {
-	          if (typeof item.pattern === 'string') {
-	            item.pattern = Validator.templates.pattern[item.pattern];
-	          }
-	          return item;
-	        });
-	      } else {
-	        if (typeof rule.pattern === 'string') {
-	          rule.pattern = Validator.templates.pattern[rule.pattern];
-	        }
-	      }
-	      return rule;
-	    }
-	  }, {
-	    key: 'setForm',
-	    value: function setForm(form, validateRules, submitCallback) {
-	      this.$form_ = form;
-	      if (submitCallback) {
-	        this.$handleSubmit_ = submitCallback;
-	        if (validateRules) {
-	          for (var key in validateRules) {
-	            validateRules[key] = this.pack(validateRules[key]);
-	          }
-	          this.$validateRules_ = validateRules;
-	        }
-	      } else if (validateRules) {
-	        this.$handleSubmit_ = validateRules;
-	      }
-	    }
-	  }, {
-	    key: 'submit',
-	    value: function submit(callback) {
-	      var _this = this;
-
-	      return this.validateFieldsAndScroll(function (errors, values) {
-	        values = _this.$handleSubmit_(errors, values);
-	        if (values === false) {
-	          return false;
-	        } else {
-	          return callback(values);
-	        }
-	      });
-	    }
-	  }, {
-	    key: 'reset',
-	    value: function reset() {
-	      this.$form_.resetFields();
-	    }
-	  }, {
-	    key: 'getProps',
-	    value: function getProps(fieldName, rule) {
-	      if (this.$validateRules_[fieldName]) {
-	        return assignDeep(this.$validateRules_[fieldName], rule && this.pack(rule));
-	      } else {
-	        return rule && this.pack(rule);
-	      }
-	    }
-	  }, {
-	    key: 'validate',
-	    value: function validate(source, callback) {
-	      new _asyncValidator2.default(this.$validateRules_).validate(source, function (errors, values) {
-	        if (Validator.errorHandler(errors, values) !== false) {
-	          callback && callback(errors, values);
-	        }
-	      });
-	    }
-
-	    // #! for antd-form
-
-	  }, {
-	    key: 'getFieldProps',
-	    value: function getFieldProps(fieldName, option) {
-	      if (!option.rules && option.rule) {
-	        option.rules = [option.rule];
-	      }
-	      if (this.$validateRules_[fieldName]) {
-	        // option.rules = assignDeep([].concat(this.$validateRules_[fieldName]),
-	        // option.rules && this.pack(option.rules) || []);
-	        option.rules = [].concat(this.$validateRules_[fieldName], option.rules && this.pack(option.rules) || []);
-	      } else if (option.rules) {
-	        option.rules = this.pack(option.rules);
-	      }
-	      return this.$form_.getFieldProps(fieldName, option);
-	    }
-	  }, {
-	    key: 'getFieldDecorator',
-	    value: function getFieldDecorator(fieldName, option) {
-	      if (!option.rules && option.rule) {
-	        option.rules = [option.rule];
-	      }
-	      if (this.$validateRules_[fieldName]) {
-	        // option.rules = assignDeep([].concat(this.$validateRules_[fieldName]),
-	        // option.rules && this.pack(option.rules) || []);
-	        option.rules = [].concat(this.$validateRules_[fieldName], option.rules && this.pack(option.rules) || []);
-	      } else if (option.rules) {
-	        option.rules = this.pack(option.rules);
-	      }
-	      return this.$form_.getFieldDecorator(fieldName, option);
-	    }
-	  }, {
-	    key: 'validateFields',
-	    value: function validateFields() {
-	      var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : noop;
-
-	      var defer = new _damoCore.Deferred();
-	      this.$form_.validateFields(function (errors, values) {
-	        if (Validator.errorHandler(errors, values) !== false) {
-	          var result = callback(errors, values);
-	          if (result && result.then) {
-	            result.then(defer.resolve, defer.reject);
-	          } else if (result === false) {
-	            defer.reject(false);
-	          } else {
-	            defer.resolve(result);
-	          }
-	        }
-	      });
-	      return defer.promise;
-	    }
-	  }, {
-	    key: 'validateFieldsAndScroll',
-	    value: function validateFieldsAndScroll() {
-	      var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : noop;
-
-	      var defer = new _damoCore.Deferred();
-	      this.$form_.validateFieldsAndScroll(function (errors, values) {
-	        if (Validator.errorHandler(errors, values) !== false) {
-	          var result = callback(errors, values);
-	          if (result && result.then) {
-	            result.then(defer.resolve, defer.reject);
-	          } else if (result === false) {
-	            defer.reject(false);
-	          } else {
-	            defer.resolve(result);
-	          }
-	        }
-	      });
-	      return defer.promise;
-	    }
-	  }]);
-
-	  return Validator;
-	}(), _class.enhanceForm = function (option) {
-	  return function (BaseComponent) {
-	    var Component = _form2.default.create(Object.assign(option || {}, { withRef: true }))(BaseComponent);
-	    Component.prototype.getRealInstance = function () {
-	      return this.refs.wrappedComponent.refs.formWrappedComponent;
-	    };
-	    return (0, _hoistNonReactStatics2.default)(Component, BaseComponent);
-	  };
-	}, _class.validate = function (rules, source, callback) {
-	  var descriptor = {};
-	  for (var key in rules) {
-	    if (typeof rules[key] === 'boolean') {
-	      descriptor[key] = {
-	        type: 'string',
-	        required: rules[key]
-	      };
-	    } else {
-	      descriptor[key] = rules[key];
-	    }
-	    fields[key] = source[key];
-	  }
-	  var validator = new _asyncValidator2.default(descriptor);
-	  validator.validate(source, callback);
-	}, _class.errorHandler = function () {}, _class.templates = {
-	  pattern: {
-	    // #! 中英字母数字下划线
-	    legal: /^[A-Za-z0-9_\u4e00-\u9fa5]*$/,
-	    // #! 必须是字母数字、下划线、中划线以及
-	    light_legal: /^[A-Za-z0-9\._\-]*$/,
-	    // #! 以字母开头，不能包含中文或特殊字符
-	    light_light_legal: /^[a-zA-Z]\w*$/,
-	    // #! 中英字母数字下划线
-	    dark_legal: /^[A-Za-z0-9\_\u4e00-\u9fa5]*$/,
-	    // #! 必须是中英字母数字下划线以及.
-	    dark_dark_legal: /^[A-Za-z0-9\._\u4e00-\u9fa5]*$/
-	  } }, _class.$inject = ['props', 'validateRules'], _temp);
-
-
-	function assignDeep(obj, newObj) {
-	  if (Array.isArray(obj)) {
-	    return obj.map(function (item, index) {
-	      return assignDeep(item, newObj[index]);
-	    });
-	  } else {
-	    return Object.assign(obj, newObj);
-	  }
-	}
-
-/***/ },
-/* 35 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 36 */
-35,
-/* 37 */
-35,
-/* 38 */
-35,
-/* 39 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_39__;
-
-/***/ },
-/* 40 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_40__;
-
-/***/ },
-/* 41 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_41__;
-
-/***/ },
 /* 42 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_42__;
-
-/***/ },
+41,
 /* 43 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_43__;
-
-/***/ },
+41,
 /* 44 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_44__;
-
-/***/ },
+41,
 /* 45 */
 /***/ function(module, exports) {
 
@@ -3883,6 +4375,66 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_55__;
+
+/***/ },
+/* 56 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_56__;
+
+/***/ },
+/* 57 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_57__;
+
+/***/ },
+/* 58 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_58__;
+
+/***/ },
+/* 59 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_59__;
+
+/***/ },
+/* 60 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_60__;
+
+/***/ },
+/* 61 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_61__;
+
+/***/ },
+/* 62 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_62__;
+
+/***/ },
+/* 63 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_63__;
+
+/***/ },
+/* 64 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_64__;
+
+/***/ },
+/* 65 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_65__;
 
 /***/ }
 /******/ ])))
