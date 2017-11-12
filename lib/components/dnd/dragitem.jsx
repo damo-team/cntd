@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {DragSource} from 'react-dnd';
 
@@ -18,7 +19,7 @@ import {DragSource} from 'react-dnd';
     isDragging: monitor.isDragging()
   };
 })
-export class DragItem extends Component {
+export class DragItem extends React.PureComponent {
   static propTypes = {
     type: PropTypes.string.isRequired,
     data: PropTypes.object.isRequired,

@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 import Menu from 'antd/lib/menu';
@@ -29,7 +30,7 @@ function BFS(menus, callback, parentMenu = []) {
 const LOCAL_MENU_KEY = 'openMenu';
 const LOCAL_STRETCH_KEY = 'stretchMenu';
 
-export class SideBar extends Component {
+export class SideBar extends React.PureComponent {
   static BFS = BFS;
 
   static propsTypes = {

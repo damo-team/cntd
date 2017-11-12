@@ -1,11 +1,12 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Select from 'antd/lib/select';
 import Pagination from 'antd/lib/pagination';
 import Icon from 'antd/lib/icon';
 import './index.less';
 
-export class Search extends Component {
+export class Search extends React.PureComponent {
   static proptTypes = {
     value: PropTypes.any,
     selectedItem: PropTypes.object,

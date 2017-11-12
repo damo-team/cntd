@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import {DropTarget} from 'react-dnd';
 
@@ -20,7 +21,7 @@ import {DropTarget} from 'react-dnd';
     canDrop: monitor.canDrop()
   };
 })
-export class DropItem extends Component {
+export class DropItem extends React.PureComponent {
   static propTypes = {
     types: PropTypes.array.isRequired,
     doAction: PropTypes.func.isRequired

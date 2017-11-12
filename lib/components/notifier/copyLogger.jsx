@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import PropsTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Clipboard from 'clipboard';
 import message from 'antd/lib/message';
 import Button from 'antd/lib/button';
 
-export class CopyLogger extends Component{
+export class CopyLogger extends React.PureComponent{
   componentDidMount(){
     /**
      * copy:

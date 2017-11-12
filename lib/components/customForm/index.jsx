@@ -20,7 +20,7 @@ import {Validator} from '../../services/validator';
 import {Notifier} from '../notifier/notifier';
 
 @Validator.enhanceForm()
-export class CustomForm extends Component {
+export class CustomForm extends React.PureComponent {
   static proptTypes = {
     dataSource: PropTypes.object,
     options: PropTypes.array.isRequired,

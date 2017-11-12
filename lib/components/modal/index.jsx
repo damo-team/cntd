@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Modal from 'antd/lib/modal';
 import cuid from 'cuid';
 
-export class AppModal extends Component {
+export class AppModal extends React.PureComponent {
   static $callbacks_ = [];
 
   static enhance = (Modal) => {

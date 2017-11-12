@@ -1,11 +1,12 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Menu from 'antd/lib/menu';
 import Button from 'antd/lib/button';
 import Dropdown from 'antd/lib/dropdown';
 import Icon from 'antd/lib/icon';
 
-export class NavLink extends Component {
+export class NavLink extends React.PureComponent {
   static propsTypes = {
     links: PropTypes.array.isRequired,
     menus: PropTypes.array.isRequired,

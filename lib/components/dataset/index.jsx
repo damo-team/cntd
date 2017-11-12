@@ -1,9 +1,10 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDom from 'react-dom';
 import {ResourceModel, BaseSelector, ucfirst} from 'damo-core';
 import formatters from './formatter';
 
-export class DataSet extends Component {
+export class DataSet extends React.PureComponent {
   static formatters = formatters; //{};
 
   static themeOptions = {};

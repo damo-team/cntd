@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Table from 'antd/lib/table';
 import Button from 'antd/lib/button';
@@ -7,7 +8,7 @@ import Icon from 'antd/lib/icon';
 import Input from 'antd/lib/input';
 import NavLink from '../navLink';
 
-export class SceneComponent extends Component {
+export class SceneComponent extends React.PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
     table: PropTypes.object,
