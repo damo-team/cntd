@@ -28,7 +28,9 @@ export class CustomForm extends React.PureComponent {
     validateRules: PropTypes.array,
     beforeSave: PropTypes.func,
     submit: PropTypes.func,
-    layout: PropTypes.string
+    layout: PropTypes.string,
+    buttons: PropTypes.object,
+    noButton: PropTypes.bool
   }
 
   static defaultProps = {
@@ -43,7 +45,16 @@ export class CustomForm extends React.PureComponent {
       },
       hasFeedback: true,
       required: true
-    }
+    },
+    buttons: [
+      {
+        type: 'primary',
+        name: '保存'
+      }, {
+        type: 'default',
+        name: '取消'
+      }
+    ]
   }
 
   constructor(props) {
@@ -89,9 +100,12 @@ export class CustomForm extends React.PureComponent {
   }
 
   renderInput(option, key) {
-    if(!option.name) return null;
+    if (!option.name) 
+      return null;
     if (option.children) {
-      const renderInput = this.renderInput.bind(this);
+      const renderInput = this
+        .renderInput
+        .bind(this);
       return (
         <Card
           key={key}
@@ -103,7 +117,9 @@ export class CustomForm extends React.PureComponent {
             .map(renderInput)}</Card>
       );
     }
-    const propsByState = option.getProps ? option.getProps(this.props.dataSource, this.state, nextState => this.setState(nextState)) : {};
+    const propsByState = option.getProps
+      ? option.getProps(this.props.dataSource, this.state, nextState => this.setState(nextState))
+      : {};
     const defaultProps = {
       disabled: option.disabled,
       placeholder: option.placeholder
@@ -131,7 +147,9 @@ export class CustomForm extends React.PureComponent {
           }
 
           input = (<InputNumber
-            style={{width: 250}}
+            style={{
+            width: 250
+          }}
             min={option.minLength
             ? option.minLength
             : 0}
@@ -279,13 +297,17 @@ export class CustomForm extends React.PureComponent {
       hasFeedback: option.hasFeedback
     }, this.props.formLayout);
     return (
-      <Form.Item key={key} {...formItemProps}>{this.$validator_.getFieldDecorator(option.name, decoratorProps)(input)}</Form.Item>
+      <Form.Item key={key} {...formItemProps}>{this
+          .$validator_
+          .getFieldDecorator(option.name, decoratorProps)(input)}</Form.Item>
     )
   }
 
   render() {
     const dataSource = this.props.dataSource;
-    const renderInput = this.renderInput.bind(this);
+    const renderInput = this
+      .renderInput
+      .bind(this);
     return (
       <Form
         layout={this.props.layout}
@@ -295,7 +317,19 @@ export class CustomForm extends React.PureComponent {
       }}>{this
           .props
           .options
-          .map(renderInput)}</Form>
+          .map(renderInput)} {!this.props.noButton
+          ? (
+            <Form.Item wrapperCol={{offset: this.props.formLayout.labelCol.span, span: this.props.formLayout.wrapperCol.span}}>
+              {this
+                .props
+                .buttons
+                .map((btn, index) => (
+                  <Button style={{marginRight: 10}} key={index} type={btn.type}>{btn.name}</Button>
+                ))}
+            </Form.Item>
+          )
+          : null}
+      </Form>
     )
   }
 }

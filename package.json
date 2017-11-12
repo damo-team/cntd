@@ -13,7 +13,7 @@
   "description": "基于antd组件规范自主研发的组件库",
   "dependencies": {
     "antd": "^2.13.8",
-    "async-validator": "~1.6.6",
+    "async-validator": "latest",
     "clipboard": "1.5.12",
     "cuid": "~1.3.8",
     "hoist-non-react-statics": "~1.2.0",
@@ -23,7 +23,7 @@
     "seamless-immutable": "~6.1.1"
   },
   "devDependencies": {
-    "damo-core": "^0.1.3",
+    "damo-core": "latest",
     "damo-redux": "latest",
     "events": "~1.1.1",
     "history": "2.1.2",

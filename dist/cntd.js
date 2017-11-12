@@ -1481,7 +1481,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 
 	            input = _react2.default.createElement(_inputNumber2.default, _extends({
-	              style: { width: 250 },
+	              style: {
+	                width: 250
+	              },
 	              min: option.minLength ? option.minLength : 0,
 	              max: maxLength
 	            }, defaultProps, propsByState));
@@ -1654,7 +1656,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	            e.preventDefault();
 	            _this4.handleSubmit();
 	          } },
-	        this.props.options.map(renderInput)
+	        this.props.options.map(renderInput),
+	        ' ',
+	        !this.props.noButton ? _react2.default.createElement(
+	          _form2.default.Item,
+	          { wrapperCol: { offset: this.props.formLayout.labelCol.span, span: this.props.formLayout.wrapperCol.span } },
+	          this.props.buttons.map(function (btn, index) {
+	            return _react2.default.createElement(
+	              _button2.default,
+	              { style: { marginRight: 10 }, key: index, type: btn.type },
+	              btn.name
+	            );
+	          })
+	        ) : null
 	      );
 	    }
 	  }]);
@@ -1667,7 +1681,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  validateRules: _propTypes2.default.array,
 	  beforeSave: _propTypes2.default.func,
 	  submit: _propTypes2.default.func,
-	  layout: _propTypes2.default.string
+	  layout: _propTypes2.default.string,
+	  buttons: _propTypes2.default.object,
+	  noButton: _propTypes2.default.bool
 	}, _class2.defaultProps = {
 	  layout: 'horizontal',
 	  dataSource: {},
@@ -1680,7 +1696,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    hasFeedback: true,
 	    required: true
-	  }
+	  },
+	  buttons: [{
+	    type: 'primary',
+	    name: '保存'
+	  }, {
+	    type: 'default',
+	    name: '取消'
+	  }]
 	}, _temp)) || _class);
 
 /***/ },
